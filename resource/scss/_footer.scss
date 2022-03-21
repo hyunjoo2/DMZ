@@ -1,0 +1,30 @@
+/* footer */ 
+.footer{
+    background: #19250e;
+    &__inner{
+        max-width: 140rem;
+        margin: 0 auto;
+        margin-top: 10rem;
+        padding:4.5rem 0;
+        
+    }
+    &-img{
+        margin-right: 6rem;
+    }
+    &-txt{
+        *{
+            line-height: 2.4rem;
+            font: {
+                size: 1.5rem;
+                weight:200;
+            }
+            color:#ffffff;
+        }
+        span{
+            &+span{
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

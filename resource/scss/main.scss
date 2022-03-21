@@ -1,0 +1,108 @@
+@import 'common';
+
+@import 'header';
+
+/* 메인 비주얼 */
+.main_visual{
+    position:relative;
+}
+.main_visualTxt{
+    position:absolute; 
+    top:13rem; 
+    left:50%; 
+    width:140rem;
+    transform:translateX(-50%);  
+    z-index: 2;
+    h1{
+        font-size:7rem; 
+        color:#fff; 
+        text-shadow: 2px 2px 15px rgba(0,0,0,1);
+        span{
+            font-weight: 200;
+        }
+    }
+}
+
+/* 시설안내 , 교육안내, 자료, 팝업존 */
+.main_cont{
+    >div{
+        &.top{
+            margin-top:4rem;
+            .inner{
+                .left{
+                    position:relative;
+                    flex:1;
+                    padding-right:4.3rem;
+                    &::before{
+                        position:absolute;
+                        left:-26rem;
+                        width: calc(100% + 26rem);
+                        height:100%;
+                        background: url(../image/main/bg_green.jpg)no-repeat 0 top; 
+                        content: ""; 
+                        z-index: -1;
+                    }
+                    >div{
+                        flex:1;
+                    }
+                    h2{
+                        padding-top:4rem;
+                        color:#ffffff;
+                    }
+                    .img_wrap{
+                        img{
+                            box-shadow: 10px 10px 28px rgba(0,0,0,0.25);
+                        }
+                    }
+                }
+                .box{
+                    &+&{margin-left: 4rem;}
+                }
+            }
+            .right{
+                .popup{
+                    &_wrap{
+                        width:43.6rem;
+                        border:1px solid #dedede;
+                        .top{
+                            padding:3rem 3.5rem;
+                            background: #f7f8fa;
+                            h2{
+                                margin-bottom:0;
+                            }
+                        }
+                    }
+                    &_slider{
+                        padding:2rem; 
+                        background:#fff;
+                    }
+                }
+            }
+        }
+        .inner{
+            width:140rem;
+            margin: 0 auto;
+        }
+        h2{
+            margin-bottom: 3rem;
+            font-size:2.8rem;
+            font-weight: 600;
+        }
+        
+        &.bottom{
+            margin-top:5rem; 
+            padding:6rem 0; 
+            background: #f7f7f7;
+            .inner{
+                &>div{
+                    flex:1;
+                    &:not(:last-child){
+                        margin-right: 4.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
