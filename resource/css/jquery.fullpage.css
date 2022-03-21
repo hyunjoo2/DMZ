@@ -96,13 +96,15 @@ html.fp-enabled,
     position: fixed;
     height:100%;
     z-index: 100;
-    margin-top: -32px;
-    top: 50%;
+    margin-top: 0;
+    top: 0%;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
 }
 #fp-nav.right {
     right: 50px;
+    height:100%;
+    margin-top: 0 !important;
 }
 #fp-nav.left {
     left: 17px;
@@ -126,9 +128,13 @@ html.fp-enabled,
 }
 #fp-nav ul,
 .fp-slidesNav ul {
-  margin: 0;
-  padding: 0;
+    position: absolute;
+    top: 50%;  
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
 }
+#fp-nav ul::before{ position:absolute; top:40px; left:5px; width: 1px ; height: calc(100% - 70px); background: #ffffff; opacity: .75; content: "";}
 #fp-nav ul li,
 .fp-slidesNav ul li {
     display: block;
@@ -149,28 +155,30 @@ html.fp-enabled,
     height: 100%;
     cursor: pointer;
     text-decoration: none;
+    
 }
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span{
-    top:0;
-    height: 25px;
-    width: 25px;
-    margin-top:-2px; 
-    margin-left:-8px;
+    /* top:0; */
     border-radius: 100%;
-    background-color: #0d6fb8;
+    background-color: #ffffff;
     background-image: url(../image/main/icon_main.png);
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 1;
+    outline: 5px solid rgba(255, 255, 255, .25);
  }
+ /* #fp-nav ul li a.active span::before{
+     position: absolute;
+
+ } */
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    width:9px; 
-    height:9px;
+    width:11px; 
+    height:11px;
     border-radius: 100%;
     position: absolute;
     z-index: 1;
@@ -182,7 +190,7 @@ html.fp-enabled,
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
     background:#fff;
-    opacity: 0.66;
+    opacity: 0.75;
 }
 /*
 #fp-nav ul li:hover a span,
@@ -194,19 +202,19 @@ html.fp-enabled,
 */
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
+    top: 0px;
     color: #fff;
     font-size: 16px;
-	font-weight: 500;
+	font-weight: 300;
     /*font-family: arial, helvetica, sans-serif;*/
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;
     display: block;
-    opacity: 0;
     width: auto;
     cursor: pointer;
-	opacity: 0.66;
+	opacity: 0.55;
+    line-height: 100%;
 }
 #fp-nav ul li a.active+.fp-tooltip{
     opacity: 1;
@@ -219,7 +227,7 @@ html.fp-enabled,
     opacity: 1;
 }
 #fp-nav ul li .fp-tooltip.right {
-    right: 20px;
+    right: 30px;
 }
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
