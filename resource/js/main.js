@@ -16,10 +16,6 @@ $(document).ready(function () {
             } else if (index == 5 && direction == 'up') {
                 $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
             }
-
-            $('#staticImg').toggleClass('active', (index == 4 && direction == 'down') || (index == 4 && direction == 'up'));
-            $('#staticImg').toggleClass('moveDown', nextIndex == 6);
-            $('#staticImg').toggleClass('moveUp', index == 6 && direction == 'up');
         },
 
 		onLeave: function(){
@@ -30,10 +26,28 @@ $(document).ready(function () {
 		},
 		afterSlideLoad: function(){
 			jQuery('.slide.active [data-aos]').addClass("aos-animate");
+			
 		},
 		afterLoad: function(){
 			jQuery('.section.active [data-aos]').addClass("aos-animate");
 		   //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
+
+		   $(".counter-num p").each(function(i) {
+		
+				let max_count = $(this).data("count"); // 카운트 될 값
+				var scoreDisplay = this;
+				var count = {score:0};
+				
+				var tween1 = new TimelineMax();
+				tween1.to(count, 1, {score:max_count, roundProps:"score", onUpdate:function(){  scoreDisplay.innerHTML = count.score; }, ease:Linear.easeNone});
+
+
+				//document.writeln(cn1);
+			});
+			
+		
+		   
+			
 		}
 
     });	
@@ -48,5 +62,7 @@ $(function () {
 			el: ".banner .swiper-pagination",
 		},
 	});
+
+
 
 })

@@ -32,6 +32,8 @@
 	<script src="./resource/js/common.js"></script>
 	<script src="./resource/js/main.js"></script>
 	<script src="./resource/js/sub.js"></script>
+
+	
 	
 
 	
@@ -264,7 +266,10 @@
 								</div>
 								<div class="counter-data">
 									<p class="counter-tit">총 교육 횟수</p>
-									<p class="counter-num">1,238<span>건</span></p>
+									<div class="counter-num">
+										<p data-count='1234'>0</p><span>건</span>
+										<!-- <p class="counter">1,234</p><span>건</span> -->
+									</div>
 								</div>
 							</div>
 							<div>
@@ -273,7 +278,9 @@
 								</div>
 								<div class="counter-data">
 									<p class="counter-tit">교육인원</p>
-									<p class="counter-num">1,238<span>건</span></p>
+									<div class="counter-num">
+										<p data-count='43099'>0</p><span>명</span>
+									</div>
 								</div>
 							</div>
 							<div>
@@ -282,9 +289,12 @@
 								</div>
 								<div class="counter-data">
 									<p class="counter-tit">교육기간(년)</p>
-									<p class="counter-num">1,238<span>건</span></p>
+									<div class="counter-num">
+										<p data-count='7'>0</p><span>년</span>
+									</div>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -302,13 +312,53 @@
 					</div>
 				</div>
 			</div>
-			<div class="section" id="section4">
-				444
+			<div class="section section4" id="section4">
+				<div class="section__inner d-flex align-items-center justify-content-center flex-column">
+					<div class="text">
+						<div class="tit">뉴스레터 신청하기</div>
+						<div class="txt">한국DMZ평화생명동산의 최신 소식을 받아보실 수 있습니다. <br>
+							메일링 서비스를 원하시면 귀하의 이메일 주소를 아래에 입력 후 신청을 클릭해주세요.</div>
+					</div>
+
+					<div class="newsletter-area">
+						<div class="newsletter-area__inner">
+							<div class="newsletter-box d-flex align-items-center justify-content-center">
+								<input type="text" placeholder="이메일 주소를 입력해 주세요.">
+								<button type="button">신청하기</button>
+							</div>
+							<div class="newsletter-des">
+								궁금하신 점이 있으시면  (사)한국DMZ평화생명동산 사무국 033-463-5155~7로 문의해주시기 바랍니다.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mousescroll">
+					<div class="mousescroll__inner">
+						<img src="./resource/image/main/icon-mousescroll.png" alt="">
+						<!-- <div class="mouseswrap">
+							<span></span>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div> -->
+					</div>
+				</div>
 			</div>
 
 			<div class="section last fp-auto-height fp-section" id="section5">
-				<footer class="footer">
-				</footer>
+				<div class="footer">
+					<div class="footer__inner d-flex align-items-center">
+						<div class="footer-img">  
+							<img src="../resource/image/common/logo-footer.jpg" alt="">
+						</div>
+						<div class="footer-txt">
+							<p><span>(24600) 강원도 인제군 서화면 금강로 1630</span><span>Tel : 033-463-5155~7</span><span>Fax : 033-463-5158</span><span>E-mail : dmzecopeace@gmail.com</span></p>
+							<p>COPYRIGHT(C) 2016 SOUTH-NORTH GANGWON PROUINCE COOPERATION SOCIETY. ALL RIGHT RESERVED.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -317,7 +367,13 @@
 </body>
 <script>
 	AOS.init();
+
+	//const controller = new ScrollMagic.Controller();
+
+	
+	
 	
 </script>
+
 
 </html>

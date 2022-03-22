@@ -193,6 +193,12 @@
             }
         }
     }
+    &3{
+        background: url(../image/main/bg-section3.png);     
+    }
+    &4{
+        background: url(../image/main/bg-section4.jpg);     
+    }
 }
 .quickmenu{
     &__inner{
@@ -367,7 +373,6 @@
 }
 
 /* section 2 */   
-
 .nav{
     &-tabs{
         border: none;
@@ -492,7 +497,6 @@
         }
     }
 }
-
 .mousescroll{
     &__inner{
         position: absolute; 
@@ -505,8 +509,135 @@
     }
 }
 
+/* section3 */ 
+.main-counter{
+    width:100%;
+    &__inner{
+        box-shadow: .3rem .3rem 1.5rem rgba(0,0,0,0.15);
+        >div{
+            @include d-flex;
+            @include flex-column;
+            position:relative;
+            height: 36rem;
+            flex:1;
+            background: #ffffff;
+            &+div{
+                &::before{
+                    position: absolute;
+                    left:0;
+                    width:1px;
+                    height: calc(100% - 11.3rem);
+                    background: #dddddd;
+                    content:""
+                }
+            }
+        }
+    }
+    .counter{
+        &-data{
+            margin-top: 3rem;
+        }
+        &-tit{
+            text-align: center;
+            font-weight: 500;
+        }
+        &-num{
+            margin-top: 1.5rem;
+            text-align: center;
+            p{
+                display: inline-block;
+                font: {
+                    size: 4.5rem;
+                    weight:600;
+                }
+            }
+            span{
+                padding-left:.5rem;
+                font: {
+                    size: 2.4rem;
+                    weight:600;
+                }
+                
+            }            
+        }
+    }
+}
+
+/* section4 */ 
+.section4{
+    .text{
+        color:#ffffff;
+        text-align:center;
+        .tit{
+            font: {
+                size:5.2rem;
+                weight:500;
+            }
+        }
+        .txt{
+            margin-top: 4.5rem;
+            font: {
+                size:2.2rem;
+                weight:200;
+            }
+            line-height: 3.6rem;
+        }
+    }
+    .newsletter{
+        &-area{
+            max-width: 85rem;
+                width:100%;
+            &__inner{
+                margin-top: 4.5rem;
+            }
+        }
+        &-box{
+            padding:.4rem;
+            background: linear-gradient(90deg, #8dda4e, #63b023);
+            box-shadow: 1.6rem 1.6rem 3.6rem rgba(0,0,0,.28);
+            input{
+                width:100%;
+                height:7.2rem;
+                padding-left: 0;
+                border:none;
+                font-size:2.2rem;
+                text-indent: 3rem;
+                &::placeholder{
+                    color:#434a5c;
+                }
+            }
+            button{
+                width:14rem;
+                height:7rem;
+                font-size:2.4rem;
+                color:#ffffff;
+            }
+        }
+        &-des{
+            margin-top: 6rem;
+            padding:5rem 0;
+            background: #5f9130;
+            font: {
+                size:1.8rem;
+                weight:200;
+            }
+            color:#ffffff;
+            text-align: center;
+        }
+    }
+}
+
+
+#fp-nav{
+    li{
+        &:last-child{
+            display: none;
+        }
+    }
+}
+
 .fp-viewing{
-    &-secondPage{
+    &-secondPage, &-thirdPage{
         #fp-nav{
             ul {
                 &::before{
@@ -515,12 +646,12 @@
                 li {
                     .fp-tooltip{
                         color:#999999;
+                        opacity: 1;
                     }
                     a{
                         span{
                             background: #999999;
                         }
-                        
                         &.active{
                             span{
                                background: #000000;
@@ -535,42 +666,13 @@
             }
         } 
     }
+    &-footer{
+        #fp-nav{
+            display: none;
+        }
+        .mousescroll{
+            display: none;
+        }
+    }
 }
 
-/* section3 */ 
-.main-counter{
-    width:100%;
-    &__inner{
-        box-shadow: .3rem .3rem 1.5rem rgba(0,0,0,0.15);
-        >div{
-            @include d-flex;
-            @include flex-column;
-            height: 36rem;
-            flex:1;
-            background: #ffffff;
-        }
-    }
-    .counter{
-        
-        &-data{
-            margin-top: 3rem;
-        }
-        &-tit{
-            text-align: center;
-        }
-        &-num{
-            margin-top: 1.5rem;
-            font: {
-                size: 4.5rem;
-                weight:600;
-            }
-            span{
-                font: {
-                    size: 2.4rem;
-                    weight:600;
-                }
-                
-            }            
-        }
-    }
-}

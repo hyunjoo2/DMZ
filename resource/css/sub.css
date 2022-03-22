@@ -265,6 +265,9 @@ header .sitemap button span:last-child { width: 2rem; margin-left: auto; }
 .fp-viewing-firstPage header .sitemap button span { background: #ffffff; }
 
 /* footer */
+/* main footer */
+.section .footer__inner { margin-top: 0; }
+
 .footer { background: #19250e; }
 
 .footer__inner { max-width: 140rem; margin: 0 auto; margin-top: 10rem; padding: 4.5rem 0; }

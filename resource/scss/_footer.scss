@@ -1,4 +1,14 @@
 /* footer */ 
+
+/* main footer */ 
+.section{
+    .footer{
+        &__inner{
+            margin-top: 0;
+        }
+    }
+}
+
 .footer{
     background: #19250e;
     &__inner{
