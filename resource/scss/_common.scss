@@ -294,8 +294,6 @@ p{
     margin-bottom: 0;
 }
 
-
-
 .skipNavigation {
 	position: absolute;
 	left: -9999px;
@@ -334,4 +332,8 @@ p{
     height: 1px;
     text-indent: -9999px;
     
+}
+
+label{
+    margin: 0;
 }
