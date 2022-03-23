@@ -57,7 +57,7 @@
                         width:1.4rem;
                         height:.8rem;
                         margin-left: auto;
-                        
+                        background-size: cover !important;
                     }
                 }
             }
@@ -220,7 +220,6 @@
 .paging{
     &__inner{
         //margin: 0 -.15rem;
-        
         a{
             @include d-flex;
             width: 4.3rem;
@@ -236,19 +235,23 @@
             }
             &.first{
                 background-image: icon(paging-first);
+                background-size: 2rem 1rem;
                 margin: 0 .15rem;
             }
             &.prev{
                 background-image: icon(paging-prev);
+                background-size: .9rem 1rem;
                 margin-left:.15rem;
             }
             &.next{
                 background-image: icon(paging-prev);
+                background-size: .9rem 1rem;
                 transform: rotate(180deg);
                 margin: 0 .15rem;
             }
             &.last{
                 background-image: icon(paging-first);
+                background-size: 2rem 1rem;
                 transform: rotate(180deg);
                 margin-left:.15rem;
             } 
@@ -319,6 +322,7 @@
                             height: 1.6rem;
                             margin-left: 1rem;
                             background: url(../image/sub/icon-lock.png)no-repeat center;
+                            background-size: 1.3rem 1.6rem;
                         }
                     }
                     
@@ -379,7 +383,7 @@
                 padding:0rem 1.3rem;
                 text-align: left;
                 li{
-                    display: inline-block;
+                    //display: inline-block;
                     position:relative;
                     padding-left:1rem;
                     &::before{
@@ -716,7 +720,6 @@
     }
     .upload-name {
         display: inline-block;
-        padding: .5em .75em;
         font-size: inherit;
         font-family: inherit;
         line-height: normal;
@@ -784,6 +787,55 @@
                 padding: {
                     left: 3rem;
                     right: 3rem;
+                }
+            }
+        }
+    }
+    .table-wrap{
+        &.ver{
+            .table{
+                table-layout: fixed;
+                colgroup{
+                    col{
+                        &:nth-child(1){
+                            width:14rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table-wrap:not(.ver){
+        position:relative;
+        overflow-x: scroll;
+        &::before{
+            @include d-flex;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.48);
+            color: #ffffff;
+            font-size: 2rem;
+            content: "표를 밀어보세요";
+            z-index: 1;
+        }
+        &.scroll{
+            &::before{
+                display: none;
+            }
+        }
+        
+        .table{
+            width:720px;
+        }
+    }
+    .security{
+        >div:not(.captcha){
+            flex:1;
+            &.form-group{
+                input{
+                    width:100%;
                 }
             }
         }

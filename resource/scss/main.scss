@@ -37,6 +37,7 @@
             @include d-flex;
             height: calc(100% - 29.5rem);
             text-align: center;
+            padding:0 3rem;
            h1{
                 font-size: 6rem;
                 color:#ffffff;
@@ -140,14 +141,17 @@
     
     &2{
         background: url(../image/main/bg-section2.png);  
+        // .board-wrap{
+        //     flex-wrap: wrap;
+        // }
         .tap_wrap{
             flex:1;
         }
         .banner{
+            margin-left: 4rem;
             &__inner{
                 position: relative;
                 width: 30rem;
-                margin-left: 4rem;
                 .swiper{
                     &-pagination{
                         position: absolute;
@@ -532,6 +536,12 @@
                 }
             }
         }
+        .img-wrap{
+            img{
+                width:14rem;
+                height: 14rem;
+            }
+        }
     }
     .counter{
         &-data{
@@ -615,7 +625,7 @@
         }
         &-des{
             margin-top: 6rem;
-            padding:5rem 0;
+            padding:5rem 3rem;
             background: #5f9130;
             font: {
                 size:1.8rem;
@@ -623,6 +633,7 @@
             }
             color:#ffffff;
             text-align: center;
+            line-height: normal;
         }
     }
 }
@@ -676,3 +687,85 @@
     }
 }
 
+
+/*=================================================================================================
+============================================ responsive ========================================
+================================================================================================*/ 
+
+@media screen and(max-width:900px){
+    #section{
+        &2{
+            height: auto !important;
+            padding: {
+                top:5rem;
+                bottom:8rem;
+            }
+            .board-wrap{
+                flex-wrap: wrap;
+                margin-top: 4rem;
+            }
+            .tab-content{
+                .tab-pane{
+                    .notice{
+                        &__inner{
+                            padding:2rem 4rem;
+                        }
+                    }
+                }
+            }
+            .banner{
+                width:100%;
+                margin-left: 0;
+                margin-top: 2rem;
+                &__inner{
+                    width:100%;
+                    .swiper{
+                        &-slide{
+                            a{
+                                display: block;
+                                width:100%;
+                                img{
+                                    display: block;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mousescroll{
+        display: none;
+    }
+}
+@media screen and(max-width:720px){
+    #section{
+        &2{
+            .tab-content{
+                .tab-pane{
+                    .notice{
+                        &__inner{
+                            flex-direction: column;
+                        }
+                        &-item{
+                            &.first{
+                                width: 100%;
+                                margin-right: 0;
+                            }
+                            &.other{
+                                margin-top: 2rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    .section:not(:first-child){
+        >div{
+            padding:0 3rem;
+        }
+    }
+}
