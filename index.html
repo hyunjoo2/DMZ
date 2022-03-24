@@ -68,9 +68,9 @@
 					<div class="snsSitemap d-flex">
 						<div class="sns">
 							<ul class="d-flex align-items-center justify-content-end">
-								<li class="sns-blog"><a href="javascript:void(0)"></a></li>
-								<li class="sns-facebook"><a href="javascript:void(0)"></a></li>
-								<li class="sns-insta"><a href="javascript:void(0)"></a></li>
+								<li class="sns-blog"><a href="https://blog.naver.com/dmzecopeace" target="_blank"></a></li>
+								<li class="sns-facebook"><a href="https://www.facebook.com/dmzecopeace" target="_blank"></a></li>
+								<li class="sns-insta"><a href="https://www.instagram.com/dmzecopeace/" target="_blank"></a></li>
 							</ul>
 						</div>
 						<div class="sitemap">
@@ -81,7 +81,7 @@
 							</button>
 						</div>
 					</div>
-				</div>
+				</div> 
 			</div>
 		</header>
 		<div class="" id="fullpage">
@@ -402,63 +402,76 @@
 				}
 			},
 
-			onLeave: function () {
-				jQuery('.section [data-aos]').removeClass("aos-animate");
-			},
-			onSlideLeave: function () {
-				jQuery('.slide [data-aos]').removeClass("aos-animate");
-			},
-			afterSlideLoad: function () {
-				jQuery('.slide.active [data-aos]').addClass("aos-animate");
-
-			},
-			afterLoad: function () {
+			afterLoad: function(index,anchorIndex){
 				jQuery('.section.active [data-aos]').addClass("aos-animate");
-				//jQuery('.fp-table.active .aos-init').addClass('aos-animate');
+				if(anchorIndex == '3'){
+					$(".counter-num").find("p").each(function (i) {
+						let max_count = $(this).data("count"); // 카운트 될 값
+						var scoreDisplay = this;
+						var count = {
+							score: 0
+						};
 
-				$(".counter-num p").each(function (i) {
+						var tween1 = new TimelineMax();
+						tween1.to(count, 1, {
+							score: max_count,
+							roundProps: "score",
+							onUpdate: function () {
+								scoreDisplay.innerHTML = count.score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+							},
+							ease: Linear.easeNone
+						});
 
-					let max_count = $(this).data("count"); // 카운트 될 값
-					var scoreDisplay = this;
-					var count = {
-						score: 0
-					};
-
-					var tween1 = new TimelineMax();
-					tween1.to(count, 1, {
-						score: max_count,
-						roundProps: "score",
-						onUpdate: function () {
-							scoreDisplay.innerHTML = count.score;
-						},
-						ease: Linear.easeNone
+						
 					});
-
-
-					//document.writeln(cn1);
-				});
-
-
-
-
-			}
-
-		});
-	})
-
-	$(function () {
-		$("#fullpage").prev().addClass("main");
-
-		var swiper = new Swiper('.banner .swiper-container', {
-			slidesPerView: 1,
-			pagination: {
-				el: ".banner .swiper-pagination",
+				}
 			},
+
+			// onLeave: function () {
+			// 	jQuery('.section [data-aos]').removeClass("aos-animate");
+			// },
+			// onSlideLeave: function () {
+			// 	jQuery('.slide [data-aos]').removeClass("aos-animate");
+			// },
+			// afterSlideLoad: function () {
+			// 	jQuery('.slide.active [data-aos]').addClass("aos-animate");
+				
+
+			// },
+			// afterLoad: function () {
+			// 	jQuery('.section.active [data-aos]').addClass("aos-animate");
+			// 	//jQuery('.fp-table.active .aos-init').addClass('aos-animate');
+
+			
+			// 	$(".counter-num p").each(function (i) {
+
+			// 	let max_count = $(this).data("count"); // 카운트 될 값
+			// 	var scoreDisplay = this;
+			// 	var count = {
+			// 		score: 0
+			// 	};
+
+			// 	var tween1 = new TimelineMax();
+			// 	tween1.to(count, 1, {
+			// 		score: max_count,
+			// 		roundProps: "score",
+			// 		onUpdate: function () {
+			// 			scoreDisplay.innerHTML = count.score;
+			// 		},
+			// 		ease: Linear.easeNone
+			// 	});
+
+
+			// 	//document.writeln(cn1);
+			// 	});
+
+
+			// }
+
 		});
-
-
-
 	})
+
+	
 </script>
 
 

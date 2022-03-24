@@ -89,6 +89,11 @@ $height-l:936px;
 @mixin align-center {
   -webkit-box-align:center;-ms-flex-align:center;align-items:center;
 }
+@mixin align-items($align) {
+  -webkit-box-align:($align);
+  -ms-flex-align:($align);
+  align-items:($align);
+}
 
 @mixin justify-center {
   -webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;  

@@ -232,13 +232,17 @@ header .logo { display: -webkit-box; display: -ms-flexbox; display: flex; -webki
 
 header .logo a { display: inline-block; width: 15.9rem; height: 7rem; background: url(../image/common/logo.jpg); }
 
+header .gnb { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
 header .gnb_wrap { height: 10rem; background: #ffffff; }
 
 header .gnb_wrap .inner { width: 140rem; margin: 0 auto; }
 
+header .gnb ul { width: 63.9rem; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 auto; }
+
 header .gnb ul li { font-size: 2.4rem; }
 
-header .gnb ul li a { padding: 0 5rem; font-weight: 500; }
+header .gnb ul li a { font-weight: 500; }
 
 header .sns ul li a { display: inline-block; vertical-align: middle; padding: 0 1.5rem; -webkit-box-sizing: unset; box-sizing: unset; }
 
@@ -258,13 +262,21 @@ header .sitemap button span:last-child { width: 2rem; margin-left: auto; }
 
 .fp-viewing-firstPage header .gnb ul li a { color: #ffffff; text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.35); }
 
-.fp-viewing-firstPage header .sns-blog a { width: 2.2rem; height: 1.8rem; background: url(../image/common/icon-blog__color-white.png) no-repeat center; }
+.fp-viewing-firstPage header .sns-blog a { width: 2.2rem; height: 1.8rem; background: url(../image/common/icon-blog__color-white.png) no-repeat center; background-size: 2.2rem 1.8rem; }
 
-.fp-viewing-firstPage header .sns-facebook a { width: 1rem; height: 1.8rem; background: url(../image/common/icon-facebook__color-white.png) no-repeat center; }
+.fp-viewing-firstPage header .sns-facebook a { width: 1rem; height: 1.8rem; background: url(../image/common/icon-facebook__color-white.png) no-repeat center; background-size: 1rem 1.8rem; }
 
-.fp-viewing-firstPage header .sns-insta a { width: 1.9rem; height: 1.9rem; background: url(../image/common/icon-insta__color-white.png) no-repeat center; }
+.fp-viewing-firstPage header .sns-insta a { width: 1.9rem; height: 1.9rem; background: url(../image/common/icon-insta__color-white.png) no-repeat center; background-size: 1.9rem 1.9rem; }
 
 .fp-viewing-firstPage header .sitemap button span { background: #ffffff; }
+
+/*=================================================================================================
+============================================ responsive ========================================
+================================================================================================*/
+@media screen and (max-width: 1200px) { header .gnb { padding: 0 5rem; }
+  header .gnb ul { width: 100%; } }
+
+@media screen and (max-width: 1024px) { header .gnb { position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background: #ffffff; } }
 
 /* footer */
 /* main footer */
