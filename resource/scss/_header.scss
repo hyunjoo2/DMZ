@@ -46,7 +46,8 @@ header {
             display: inline-block;
             width: 15.9rem;
             height:7rem;
-            background: url(../image/common/logo.jpg);
+            background: url(../image/common/logo.jpg)no-repeat center;
+            background-size: cover;
         }
     }
     .gnb{
@@ -75,6 +76,7 @@ header {
     }
     .sns{
         ul{
+            height:100%;
             li{
                 a{
                     display: inline-block;
@@ -89,6 +91,7 @@ header {
                 width: 2.2rem;
                 height: 1.8rem;
                 background: url(../image/common/icon-blog.png)no-repeat center;
+                background-size: 2.2rem 1.8rem;
             }
         }
         &-facebook{
@@ -96,6 +99,7 @@ header {
                 width: 1rem;
                 height: 1.8rem;
                 background: url(../image/common/icon-facebook.png)no-repeat center;
+                background-size: 1rem 1.8rem;
             }
         }
         &-insta{
@@ -103,6 +107,7 @@ header {
                 width: 1.9rem;
                 height: 1.9rem;
                 background: url(../image/common/icon-insta.png)no-repeat center;
+                background-size: 1.9rem;
             }
         }
     }
@@ -120,6 +125,23 @@ header {
                 &:last-child{
                     width:2rem; 
                     margin-left:auto;
+                }
+            }
+            &.button-close{
+                position: relative;
+                span{
+                    position:absolute;
+                    top:50%;
+                    &:nth-child(1){
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        width:0;
+                    }
+                    &:nth-child(3){
+                        width:100%;
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }

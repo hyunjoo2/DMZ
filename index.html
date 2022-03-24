@@ -269,7 +269,7 @@
 						<p class="txt">한국DMZ평화생명동산의 교육현황 숫자로 확인하세요.</p>
 					</div>
 					<div class="main-counter mt_80">
-						<div class="main-counter__inner d-flex">
+						<div class="main-counter__inner d-flex" data-aos="fade-up">
 							<div>
 								<div class="img-wrap">
 									<img src="./resource/image/main/icon-counter01.png" alt="">
@@ -330,13 +330,13 @@
 							메일링 서비스를 원하시면 귀하의 이메일 주소를 아래에 입력 후 신청을 클릭해주세요.</div>
 					</div>
 
-					<div class="newsletter-area">
-						<div class="newsletter-area__inner">
-							<div class="newsletter-box d-flex align-items-center justify-content-center">
+					<div class="newsletter-area" >
+						<div class="newsletter-area__inner" >
+							<div class="newsletter-box d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
 								<input type="text" placeholder="이메일 주소를 입력해 주세요.">
 								<button type="button">신청하기</button>
 							</div>
-							<div class="newsletter-des">
+							<div class="newsletter-des" data-aos="zoom-in" data-aos-delay="300">
 								궁금하신 점이 있으시면 (사)한국DMZ평화생명동산 사무국 033-463-5155~7로 문의해주시기 바랍니다.
 							</div>
 						</div>
@@ -378,10 +378,12 @@
 	</div>
 </body>
 <script>
+
+	//애니메이션 script
 	AOS.init();
 
-	//const controller = new ScrollMagic.Controller();
 
+	//풀페이지 script
 	$(document).ready(function () {
 		$('#fullpage').fullpage({
 			'verticalCentered': false,
