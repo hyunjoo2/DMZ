@@ -74,7 +74,7 @@ $(function(){
 			$(".sitemap button").click(function(){
 				$("html, body").addClass("overflow-hidden");
 				$(".gnb").addClass("open");
-                $(this).addClass("button-close");
+                //$(this).addClass("button-close");
 			});
 			$(".button-close, .gnb-box__bg").click(function(){
 				$("html, body").removeClass("overflow-hidden");

@@ -232,7 +232,7 @@ header .logo { display: -webkit-box; display: -ms-flexbox; display: flex; -webki
 
 header .logo a { display: inline-block; width: 15.9rem; height: 7rem; background: url(../image/common/logo.jpg) no-repeat center; background-size: cover; }
 
-header .gnb { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+header .gnb { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; -webkit-transition: all .2s; transition: all .2s; }
 
 header .gnb_wrap { height: 10rem; background: #ffffff; }
 
@@ -243,6 +243,28 @@ header .gnb ul { width: 63.9rem; -webkit-box-pack: justify; -ms-flex-pack: justi
 header .gnb ul li { font-size: 2.4rem; }
 
 header .gnb ul li a { font-weight: 500; }
+
+header .gnb .button-close-wrap { display: none; }
+
+header .gnb.open { right: auto; right: 0; padding: 0; }
+
+header .gnb.open .button-close-wrap { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; position: absolute; right: 0; width: 100%; height: 10rem; padding: 0 3.5rem; border-bottom: 1px solid #dddddd; }
+
+header .gnb.open .button-close-wrap .logo-wrap { width: 15.9rem; height: 7rem; background: url(../image/common/logo.jpg) no-repeat center; background-size: cover; }
+
+header .gnb.open .button-close { display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; width: 3.4rem; height: 2.8rem; padding-left: 0; }
+
+header .gnb.open .button-close span { position: absolute; top: 50%; width: 100%; height: .4rem; background: #000000; }
+
+header .gnb.open .button-close span:nth-child(1) { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+header .gnb.open .button-close span:nth-child(2) { width: 0; }
+
+header .gnb.open .button-close span:nth-child(3) { width: 100%; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+header .gnb.open ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; padding-top: 15rem; }
+
+header .gnb.open ul li a { font-size: 3rem; color: #000000 !important; text-shadow: none !important; }
 
 header .sns ul { height: 100%; }
 
@@ -259,16 +281,6 @@ header .sitemap button { width: 3.4rem; height: 2.8rem; padding: 0; background: 
 header .sitemap button span { width: 100%; height: .4rem; background: #000000; }
 
 header .sitemap button span:last-child { width: 2rem; margin-left: auto; }
-
-header .sitemap button.button-close { position: relative; }
-
-header .sitemap button.button-close span { position: absolute; top: 50%; }
-
-header .sitemap button.button-close span:nth-child(1) { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-
-header .sitemap button.button-close span:nth-child(2) { width: 0; }
-
-header .sitemap button.button-close span:nth-child(3) { width: 100%; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
 .fp-viewing-firstPage header .gnb_wrap { background: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 

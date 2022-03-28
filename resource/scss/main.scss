@@ -32,7 +32,8 @@
     
     &1{
         position: relative;
-        background: url(../image/main/bg-section1.png);
+        background: url(../image/main/bg-section1.png)no-repeat center;
+        background-size: cover;
         .text{
             @include d-flex;
             height: calc(100% - 29.5rem);
@@ -140,7 +141,8 @@
     }
     
     &2{
-        background: url(../image/main/bg-section2.png);  
+        background: url(../image/main/bg-section2.png)no-repeat center;
+        background-size: cover;  
         // .board-wrap{
         //     flex-wrap: wrap;
         // }
@@ -198,10 +200,12 @@
         }
     }
     &3{
-        background: url(../image/main/bg-section3.png);     
+        background: url(../image/main/bg-section3.png)no-repeat center;
+        background-size: cover;     
     }
     &4{
-        background: url(../image/main/bg-section4.jpg);     
+        background: url(../image/main/bg-section4.jpg)no-repeat center;
+        background-size: cover;     
     }
 }
 .quickmenu{
@@ -741,6 +745,13 @@
 }
 @media screen and(max-width:720px){
     #section{
+        &1{
+            .text{
+                h1{
+                    line-height: normal;
+                }
+            }
+        }
         &2{
             .tab-content{
                 .tab-pane{
@@ -766,6 +777,29 @@
     .section:not(:first-child){
         >div{
             padding:0 3rem;
+        }
+    }
+    .quickmenu{
+        &__inner{
+            div{
+                >a{
+                    padding: {
+                        top: 5.5rem;
+                        left: 1rem;
+                        right:1rem;
+                    }
+                    &::before, &::after{
+                        display: none;
+                    }
+                    
+                }
+                .txt{
+                    visibility: visible;
+                    br{
+                        display:none;
+                    }
+                }
+            }
         }
     }
 }
