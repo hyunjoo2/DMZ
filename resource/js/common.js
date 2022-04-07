@@ -1,67 +1,87 @@
-// $(function () {
-// 	subHeader();
-// 	gnbmenu();
-// 	fileupload();//파일 업로드
-// });
+$(function () {
+	gnbOpen();
+	sitemap();
+});
 
 
-// function subHeader(){
-// 	$("#fullpage").prev().children().addClass("main");
-// }
+function gnbOpen(){
+	// $(".gnb ul > li > a").mouseover(function(){
+	// 	$(".gnb-menu").addClass("open");
+	// 	$(this).parents().find(".gnb_wrap").addClass("open");
+	// });
+	// $(".gnb ul > li > a").mouseout(function(){
+	// 	$(".gnb-menu").removeClass("open");
+	// 	$(this).parents().find(".gnb_wrap").removeClass("open");
+	// });
+}
 
-// function gnbmenu(){
-// 	var gnbmenuLi = $(".header .pc .gnb>li ");
-// 	var gnbmenuA = gnbmenuLi.children();
-// 	var gnbmenuUl = gnbmenuA.next();
+//Tweenmax를 이용한 header  
+$(function(){
+	gnbSubMenu();
+});
+   
+   
+function gnbSubMenu(){
+	var gnb = $(".gnb-menu");
+	var gnbChild = $(".gnb-menu > li");
+	var gnbTitle = gnb.find('a');
 
+	gnbChild.on({
+		mouseover: function(){
+			$(this).addClass('on')			
+		},
+		mouseleave: function(){
+			$(this).removeClass('on');
+		}
+	});
+	gnbTitle.mouseover(function(){
+		headerOpen();
+	});
+	$('.header').mouseleave(function(){
+		headerClose();
+		//$('body').css('overflow', 'initial')
+	});
 
-// 	// gnbmenuA.hover(function () {
-// 	// 	$(this).addClass("on");
-// 	// 	$(this).next().addClass("open");
-// 	// }, function () {
-// 	// 	$(this).removeClass("on");
-// 	// 	$(this).next().removeClass("open");
-// 	// });
+	function headerOpen() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 open
+		TweenMax.killAll();
+		TweenMax.to($(".header"), .5, {
+			height : 480,
+			ease : 'easeOutExpo'
+		});
+		$(".header").addClass("open");
+	}
 
-// 	gnbmenuA.mouseover(function(){
-// 		$(this).addClass("on");
-// 		$(this).next().addClass("open");
-// 		$(this).parent().siblings().children().removeClass("on");
-// 		$(this).parent().siblings().children().next().removeClass("open");
-// 	});
+	function headerClose() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 close
+		TweenMax.killAll();
+		TweenMax.to($(".header"), .5, {
+			height : 100,
+			ease : 'easeOutExpo',
+			onComplete : function() {
+				$(".header").removeClass("open");
+			}
+		});
+	}
 
-// 	gnbmenuUl.mouseleave(function(){
-// 		$(this).removeClass("open");
-// 		$(this).prev().removeClass("on");
-// 	});
+}
+
+function sitemap(){
+	$(".sitemap-button>button").click(function(){
+		$(this).parent().parent().addClass("open");
+		$("html, body").addClass("overflow-hidden");
+		
+		$('body').on('scroll touchmove mousewheel', function(event) {
+			event.preventDefault();	
+			event.stopPropagation();
+			return false;
+		});
+	});
+	$(".sitemap-menu .button-close").click(function(){
+		$(this).parents().find(".sitemap").removeClass("open");
+		$("html, body").removeClass("overflow-hidden");
+		$('body').off('scroll touchmove mousewheel');
+	})
 	
-// 	$(".gnb").mouseleave(function(){
-// 		$(gnbmenuUl).removeClass("open");
-// 		$(gnbmenuA).removeClass("on");
-// 	});
-
-
-	
-
-
-
-// }
-
-// function fileupload(){
-// 	var fileTarget = $('.filebox .upload-hidden');
-
-//     fileTarget.on('change', function(){
-//         if(window.FileReader){
-//             var filename = $(this)[0].files[0].name;
-//         } else {
-//             var filename = $(this).val().split('/').pop().split('\\').pop();
-//         }
-
-//         $(this).siblings('.upload-name').val(filename);
-//     });
-// }
-
-
+}
 
 
 // 720이하 sitemap 클릭시 fullpage 스크롤 막기
@@ -79,16 +99,26 @@ $(function(){
 			$(".button-close, .gnb-box__bg").click(function(){
 				$("html, body").removeClass("overflow-hidden");
 				$(".gnb").removeClass("open");
-			});
-			
-			
+			});	
 		} 
-		//else if (width>=768 && width<992) { 
-		//} else if (width>768) {
-		//}
+		
 	});
 
 	$(window).trigger("resize"); //강제로 호출하는 함수
+
+
+	var gnbmenuLiMobile = $(".sitemap-menu__inner > ul > li");
+	$(gnbmenuLiMobile).children().next().slideUp();
+	$(gnbmenuLiMobile).click(function(){	
+		$(this).toggleClass("active");
+		//$(this).siblings().removeClass("active");
+
+		if($(this).hasClass("active")){
+			$(this).children().next().slideDown();
+		}else{
+			$(this).children().next().slideUp();
+		}
+	});
 
 
 

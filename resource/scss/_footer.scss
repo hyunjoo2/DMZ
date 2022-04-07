@@ -20,6 +20,12 @@
     }
     &-img{
         margin-right: 6rem;
+        a{
+            display: inline-block;
+            width:12rem;
+            height:7rem;
+            background: url(../image/common/logo-white.png) no-repeat center;
+        }
     }
     &-txt{
         *{

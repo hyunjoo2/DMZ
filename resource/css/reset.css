@@ -3,8 +3,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -19,10 +18,10 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 18px;
 	font-family: 'notokr', sans-serif;
 	/* font-family: 'Noto Sans CJKR', sans-serif !important; */
-	font-weight:400;
+	font-weight:300;
     font-style:normal;
     /* vertical-align: baseline; */
 }

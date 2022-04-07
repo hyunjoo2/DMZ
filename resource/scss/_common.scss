@@ -50,6 +50,7 @@ $color-lightgray : #dddddd;
 $color-red: #e63c2e;
 $color-green : #0e9200;
 $color-lightgreen : #00b050;
+$color-textgreen : #4e811f;
 $color-blue : #004690;
 $color-skyblue : #00a2ff;
 $color-cloudyBlue : rgba(0, 70, 144, 0.4);
@@ -91,6 +92,9 @@ $color-cloudyBlue : rgba(0, 70, 144, 0.4);
 }
 .color-lightgreen {
     color: $color-lightgreen !important;
+}
+.color-textgreen {
+    color: $color-textgreen !important;
 }
 .color-blue {
     color: $color-blue !important;
@@ -224,8 +228,9 @@ $font-noto : 'notokr', sans-serif;
 .font_j{font-family: 'JSDongkang-bold', 'JSDongkang-Regular';}
 
 p{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #000000;
+    line-height: 3.2rem;
     &.font-s{
         font-size: 1.8rem;
         line-height: 3.4rem;
