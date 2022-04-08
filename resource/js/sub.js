@@ -27,4 +27,14 @@ $(function(){
 
 	$(window).trigger("resize"); //강제로 호출하는 함수
 
+
+	//tab-menu
+	$('ul.tab:not(.tabStyle) li').click(function () {
+		var activeTab = $(this).attr('data-tab');
+		$('ul.tab:not(.tabStyle) li').removeClass('current');
+		$('.tabcontent').removeClass('current');
+		$(this).addClass('current');
+		$('#' + activeTab).addClass('current');
+	})
+
 });

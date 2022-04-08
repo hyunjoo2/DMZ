@@ -93,6 +93,7 @@
             &2{
                 display: none;
                 position: relative;
+                z-index: 2;
                 ul{
                     border:1px solid #eaeaea;
                     li{
@@ -127,6 +128,14 @@
             weight: 600;
         }
         text-align: center;
+        &2{
+            margin-bottom: 3rem;
+            font : {
+                size:2.4rem;
+                weight:500;
+            }
+            color:$color-green;
+        }
     }
 }
 
@@ -206,7 +215,8 @@
             height: 23.3rem;
             overflow: hidden;
             img{
-                width:100%;
+                max-width:100%;
+                max-height:100%;
             }
         }
         .title{
@@ -423,6 +433,7 @@
         &.tdBorder{
             .table{
                 position:relative;
+                margin-bottom: 0;
                 &::before{
                     position:absolute;
                     top: 0;
@@ -1002,6 +1013,61 @@
         }
     }
 }
+
+/* tab */ 
+.tab { 
+    @include d-flex;
+    width: 100%; 
+    //background: #f0f0f0; 
+    li{
+        @include d-flex;
+        flex:1;
+        height:7rem;
+        background: #f3f4f2;
+        color:#555555;
+        font-size:1.8rem;
+        cursor: pointer;
+        &.current{
+            position: relative; 
+            color: #004690;
+            box-shadow: 2.4px 1.8px 10px 0 rgba(0, 70, 144, 0.18);
+            border: solid 2px #3f8501;
+            background-color: #fff;
+            z-index: 1;
+            font-size: 2rem;
+            color:#3f8501;
+            font-weight: 500;
+            // a{
+            //     @include d-flex;
+            //     color:#3f8501;
+            // }
+        }
+        &+li{
+            margin-left: 1px
+        }
+        a{
+            @include d-flex;
+            width: 100%; 
+            height: 100%;
+           
+        }
+    }
+    &content{
+        display: none;
+        margin-top: 6rem;
+        &.current{
+            display: block;
+        }
+    }
+    &-content{
+        height: auto;
+    }
+}
+.ps{
+    font-size:1.6rem;
+    color:#666666;
+}
+
 
 /*=================================================================================================
 ============================================ responsive ========================================
