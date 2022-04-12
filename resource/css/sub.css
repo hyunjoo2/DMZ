@@ -748,6 +748,24 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .ps { font-size: 1.6rem; color: #666666; }
 
+.history__inner { margin: -6rem 0; }
+
+.history__inner dl { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; padding: 6rem 0; border-bottom: 1px solid #dcdcdc; }
+
+.history__inner dl dt { display: inline-block; margin-right: 8rem; font-size: 4.5rem; font-weight: 600; color: #3f8501; line-height: 100%; }
+
+.history__inner dl dd { padding-top: 1.5rem; }
+
+.history__inner dl dd li { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; }
+
+.history__inner dl dd li p:not(.lists) { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 11.5rem; font-weight: 500; line-height: 2.5rem; }
+
+.history__inner dl dd li + li { margin-top: 3rem; }
+
+.history__inner .lists ul li { position: relative; padding-left: 1rem; }
+
+.history__inner .lists ul li::before { position: absolute; top: 1.2rem; left: 0; width: 2px; height: 2px; background: #000; border-radius: 100%; content: ""; }
+
 /*=================================================================================================
 ============================================ responsive ========================================
 ================================================================================================*/

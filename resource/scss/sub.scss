@@ -1071,6 +1071,62 @@
 }
 
 
+.history{
+    &__inner{
+        margin: -6rem 0;
+        dl{
+            @include display-flex;
+            padding:6rem 0;
+            border-bottom:1px solid #dcdcdc;
+            dt{
+                display: inline-block;
+                margin-right: 8rem;
+                font: {
+                    size:4.5rem;
+                    weight:600;
+                }
+                color:#3f8501;
+                line-height: 100%;
+            }
+            dd{
+                padding-top: 1.5rem;
+                li{
+                    @include display-flex;
+                    p:not(.lists){
+                        flex: none;
+                        width:11.5rem;
+                        font-weight: 500;
+                        line-height: 2.5rem;
+                    }
+                    &+li{
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+        .lists{
+            ul{
+                li{
+                    position: relative;
+                    padding-left:1rem;
+                    &::before{
+                        position: absolute;
+                        top: 1.2rem;
+                        left:0;
+                        width:2px;
+                        height:2px;
+                        background: #000;
+                        border-radius: 100%;
+                        content:""
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
 /*=================================================================================================
 ============================================ responsive ========================================
 ================================================================================================*/ 
