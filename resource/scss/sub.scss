@@ -1092,6 +1092,7 @@
                 padding-top: 1.5rem;
                 li{
                     @include display-flex;
+                    
                     p:not(.lists){
                         flex: none;
                         width:11.5rem;
@@ -1109,6 +1110,7 @@
                 li{
                     position: relative;
                     padding-left:1rem;
+                    font-size: 1.8rem;
                     &::before{
                         position: absolute;
                         top: 1.2rem;
@@ -1194,6 +1196,18 @@
             &.form-group{
                 input{
                     width:100%;
+                }
+            }
+        }
+    }
+
+    .history{
+        &__inner{
+            margin: -6rem 0;
+            dl{
+                @include flex-column;
+                dd{
+                    padding-top:5rem;
                 }
             }
         }

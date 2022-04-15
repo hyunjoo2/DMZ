@@ -562,47 +562,64 @@ body{
             width:100%;
             height:100%;
             background: #ffffff;
+            &_wrap{
+                padding:0 3rem;
+            }
         }
     }
 }
 @media screen and(max-width:720px){
-    header.main{
-        height: 10rem !important;
-    }
-    header .sitemap.open .sitemap-menu{
-        height: 100vh;
-        overflow: auto;
-        .sitemap-button{
-            position: fixed;
-            z-index: 3;
+    header{
+        &.main{
+            height: 10rem !important;    
         }
-        &__inner > ul {
-            @include flex-column;
-            height:100%;
-            margin-top: 10rem;
-            >li{
-                position:relative;
-                padding:4rem;
-                flex:none;
-                &+li::before{
-                    width:100%;
-                    height:1rem;
-                    background: #F6F7F9;
-                    z-index: -1;
-                }
-                &:last-child{
-                    padding-bottom:10rem;
-                }
-                >a{
-                    width: 100%;
-                    margin-bottom: 0;
-                    font-weight: 600;
-                    &+.depth2{
-                        margin-top: 4rem;
+        .sitemap{
+            &.open{
+                .sitemap-menu{
+                    height: 100vh;
+                    overflow: auto;
+                    .sitemap-button{
+                        position: fixed;
+                        z-index: 3;
+                    }
+                    &__inner > ul {
+                        @include flex-column;
+                        height:100%;
+                        margin-top: 10rem;
+                        >li{
+                            position:relative;
+                            padding:4rem;
+                            flex:none;
+                            &+li::before{
+                                width:100%;
+                                height:1rem;
+                                background: #F6F7F9;
+                                z-index: -1;
+                            }
+                            &:last-child{
+                                padding-bottom:10rem;
+                            }
+                            >a{
+                                width: 100%;
+                                margin-bottom: 0;
+                                font-weight: 600;
+                                &+.depth2{
+                                    //display: none;
+                                    margin-top: 4rem;
+                                }
+                            }
+                        }  
                     }
                 }
-            }  
+            }
+        }
+        .sns{
+            ul{
+                li{
+                    @include display-flex;
+                    @include align-center; 
+                }
+            }
         }
     }
-
 }

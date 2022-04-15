@@ -25,6 +25,7 @@
             width:12rem;
             height:7rem;
             background: url(../image/common/logo-white.png) no-repeat center;
+            background-size: cover;
         }
     }
     &-txt{
@@ -39,6 +40,20 @@
         span{
             display: inline-block;
             margin-right: 1rem;
+        }
+    }
+}
+
+
+/*=================================================================================================
+============================================ responsive ========================================
+================================================================================================*/ 
+
+@media screen and(max-width:720px){
+    .footer{
+        &__inner{
+            padding-left:3rem;
+            padding-right:3rem;
         }
     }
 }

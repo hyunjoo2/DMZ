@@ -100,25 +100,41 @@ $(function(){
 				$("html, body").removeClass("overflow-hidden");
 				$(".gnb").removeClass("open");
 			});	
-		} 
+
+
+			//sitemap-menu
+			$(".sitemap").addClass("mobile");
+
+			var gnbmenuLiMobile = $(".mobile .sitemap-menu__inner > ul > li");
+			$(gnbmenuLiMobile).children().next().hide();
+
+			$(gnbmenuLiMobile).click(function(){	
+				$(this).addClass("active");
+				//$(this).siblings().removeClass("active");
+				if($(this).hasClass("active")){
+					$(this).children().next().slideDown();
+					$(this).click(function(){
+						$(this).removeClass("active");
+						$(this).children().next().slideUp();
+					})
+				}else{
+					$(this).children().next().slideUp();
+				}
+			});
+		}  else{
+			$(".sitemap").removeClass("mobile");
+			$(".sitemap-menu__inner > ul > li").children().next().show();
+			$(".sitemap-menu__inner > ul > li").children().next().slideDown();
+			
+		}
 		
 	});
 
 	$(window).trigger("resize"); //강제로 호출하는 함수
 
 
-	var gnbmenuLiMobile = $(".sitemap-menu__inner > ul > li");
-	$(gnbmenuLiMobile).children().next().slideUp();
-	$(gnbmenuLiMobile).click(function(){	
-		$(this).toggleClass("active");
-		//$(this).siblings().removeClass("active");
-
-		if($(this).hasClass("active")){
-			$(this).children().next().slideDown();
-		}else{
-			$(this).children().next().slideUp();
-		}
-	});
+	
+	
 
 
 
