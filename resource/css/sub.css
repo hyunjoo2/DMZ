@@ -268,17 +268,17 @@ header .gnb-menu .depth2 ul li a:hover { color: #3f8501; }
 
 header.open { background: #ffffff; -webkit-box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.13); box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.13); }
 
-header.open .logo a { background: url(../image/common/logo.png) !important; }
+header.open .logo a { background: url(../image/common/logo.png) !important; background-size: cover !important; }
 
 header.open .gnb_wrap { border-bottom: 1px solid #ededed; }
 
 header.open .gnb-menu > li > a { color: #000000 !important; text-shadow: none !important; }
 
-header.open .sns-blog a { background: url(../image/common/icon-blog.png) no-repeat center !important; }
+header.open .sns-blog a { background: url(../image/common/icon-blog.png) no-repeat center/2.2rem 1.8rem !important; }
 
-header.open .sns-facebook a { background: url(../image/common/icon-facebook.png) no-repeat center !important; }
+header.open .sns-facebook a { background: url(../image/common/icon-facebook.png) no-repeat center/1rem 1.8rem !important; }
 
-header.open .sns-insta a { background: url(../image/common/icon-insta.png) no-repeat center !important; }
+header.open .sns-insta a { background: url(../image/common/icon-insta.png) no-repeat center/1.9rem !important; }
 
 header.open .sitemap button span { background: #000000 !important; }
 
@@ -394,7 +394,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .footer { background: #19250e; }
 
-.footer__inner { max-width: 140rem; margin: 0 auto; margin-top: 10rem; padding: 4.5rem 0; }
+.footer__inner { max-width: 140rem; margin: 0 auto; margin-top: 14rem; padding: 4.5rem 0; }
 
 .footer-img { margin-right: 6rem; }
 
@@ -755,7 +755,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .ps { font-size: 1.6rem; color: #666666; }
 
-.history__inner { margin: -6rem 0; }
+.history__inner { margin: -6rem 0; margin-bottom: 0rem; }
 
 .history__inner dl { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; padding: 6rem 0; border-bottom: 1px solid #dcdcdc; }
 
@@ -773,6 +773,27 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .history__inner .lists ul li::before { position: absolute; top: 1.2rem; left: 0; width: 2px; height: 2px; background: #000; border-radius: 100%; content: ""; }
 
+/* 교육마을 위치 */
+.town-info__inner { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 3.8rem 6rem; background: #f8f8f8; }
+
+.town-info ul { width: 100%; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.town-info ul li { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; }
+
+.town-info ul li p { font-size: 1.8rem; }
+
+.town-info ul li p:first-child { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 2rem; font-size: 2rem; font-weight: 500; }
+
+.town-info ul li i { display: inline-block; margin-right: 1rem; }
+
+.town-address i { width: 1.5rem; height: 2rem; background: url(../image/sub/icon-add.png) no-repeat; }
+
+.town-tel i { width: 1.7rem; height: 1.7rem; background: url(../image/sub/icon-tel.png) no-repeat; }
+
+.town-fax i { width: 2rem; height: 2rem; background: url(../image/sub/icon-fax.png) no-repeat; }
+
+.town-mail i { width: 2.2rem; height: 1.5rem; background: url(../image/sub/icon-mail.png) no-repeat; }
+
 /*=================================================================================================
 ============================================ responsive ========================================
 ================================================================================================*/
@@ -788,4 +809,6 @@ body.overflow-hidden #fp-nav { display: none; }
   .security > div:not(.captcha).form-group input { width: 100%; }
   .history__inner { margin: -6rem 0; }
   .history__inner dl { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-  .history__inner dl dd { padding-top: 5rem; } }
+  .history__inner dl dd { padding-top: 5rem; }
+  .town-info ul li:not(:first-child) { width: 50%; }
+  .town-info ul li p { -webkit-box-flex: 0; -ms-flex: none; flex: none; } }

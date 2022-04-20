@@ -1074,6 +1074,7 @@
 .history{
     &__inner{
         margin: -6rem 0;
+        margin-bottom: 0rem;
         dl{
             @include display-flex;
             padding:6rem 0;
@@ -1127,6 +1128,77 @@
         }
     }
 }
+
+
+/* 교육마을 위치 */ 
+.town{
+    &-info{
+        &__inner{
+            @include display-flex;
+            @include align-center;
+            padding:3.8rem 6rem;
+            background: #f8f8f8;
+            
+        }
+        ul{
+            width:100%;
+            justify-content: space-between;
+            @include flex-wrap;
+            li{
+                @include display-flex;
+                p{
+                    font : {
+                        size: 1.8rem;
+                    }
+                    &:first-child{
+                        @include display-flex;
+                        @include align-center;
+                        margin-right: 2rem;
+                        font : {
+                            size: 2rem;
+                            weight: 500;
+                        }
+                    }
+                }
+                i{
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+    &-address{
+        i{
+            width: 1.5rem;
+            height: 2rem;
+            background: url(../image/sub/icon-add.png) no-repeat;
+        }
+    }
+    &-tel{
+        i{
+            width: 1.7rem;
+            height: 1.7rem;
+            background: url(../image/sub/icon-tel.png) no-repeat;
+        }
+    }
+    &-fax{
+        i{
+            width: 2rem;
+            height: 2rem;
+            background: url(../image/sub/icon-fax.png) no-repeat;
+        }
+    }
+    &-mail{
+        i{
+            width: 2.2rem;
+            height: 1.5rem;
+            background: url(../image/sub/icon-mail.png) no-repeat;
+        }
+    }
+}
+
+
+
 
 
 /*=================================================================================================
@@ -1208,6 +1280,21 @@
                 @include flex-column;
                 dd{
                     padding-top:5rem;
+                }
+            }
+        }
+    }
+
+    .town{
+        &-info{
+            ul{
+                li{
+                    &:not(:first-child){
+                        width:50%;
+                    }
+                    p{
+                        flex:none;
+                    }
                 }
             }
         }

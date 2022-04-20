@@ -214,7 +214,7 @@
                                     </div>
                                 </div>
                                 <div class="depth1 second">
-                                    <a href="javascript:void(0)">교육마을 위치<i></i></a>
+                                    <a href="javascript:void(0)">공지사항 <i></i></a>
                                     <div class="depth2">
                                         <ul>
                                             <li><a href="javascript:void(0)">인사말</a></li>
@@ -231,56 +231,105 @@
                 </div>
                 <div class="sub-content">
                     <div class="sub-content__inner">
-                        <h2 class="sub-title">교육마을 위치</h2>
+                        <h2 class="sub-title">공지사항</h2>
 
-						<div class="town">
-							<div class="town__inner">
-								<div class="town-map">
-									<!-- * 카카오맵 - 지도퍼가기 -->
-										<!-- 1. 지도 노드 -->
-										<div id="daumRoughmapContainer1650433870829" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+                        <div class="table-wrap ver">
+                            <table class="table">
+                                <caption>소개 공지사항 테이블</caption>
+                                <colgroup>
+                                    <col style="width:18rem">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td>
+                                            <div class="form-group d-flex align-items-center">
+                                                <label for=""></label>
+                                                <input type="text" class="w-100" id="" placeholder="제목">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>작성자</th>
+                                        <td>
+                                            <div class="form-group d-flex align-items-center">
+                                                <label for=""></label>
+                                                <input type="text" class="w-500" id="" placeholder="작성자">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>비밀번호</th>
+                                        <td>
+                                            <div class="form-group d-flex align-items-center">
+                                                <label for=""></label>
+                                                <input type="text" class="w-500" id="" placeholder="비밀번호">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>보안문자</th>
+                                        <td>
+                                            <div class="security d-flex">
+                                                <div class="captcha">
+                                                    <!-- 전달사항 :: 보안문자 넣어주세요. 음성듣기도 포함입니다. -->
+                                                    <img src="../../resource/image/sub/img-captcha.png" alt="">
+                                                </div>
+                                                <div class="form-group d-flex align-items-center ml_20">
+                                                    <label for=""></label>
+                                                    <input type="text" class="w-330" id="" placeholder="보안문자">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>옵션</th>
+                                        <td>
+                                            <div class="form-check d-flex align-items-center circle">
+                                                <input type="checkbox" title="" name="" id="check2" value="10">
+                                                <label for="check2">비밀글</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>내용</th>
+                                        <td>
+                                            <div class="form-group d-flex align-items-center">
+                                                <textarea name="" id=""></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사진</th>
+                                        <td>
+                                            <div class="filebox text-left form-group d-flex">
+                                                <input class="upload-name w-500" value="" disabled="disabled">
+                                                <label for="ex_filename">파일선택</label> 
+                                                <input type="file" id="ex_filename" class="upload-hidden"> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>썸네일</th>
+                                        <td>
+                                            <div class="filebox text-left form-group d-flex">
+                                                <input class="upload-name w-500" value="" disabled="disabled">
+                                                <label for="ex_filename">파일선택</label> 
+                                                <input type="file" id="ex_filename" class="upload-hidden"> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-										<!--
-											2. 설치 스크립트
-											* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
-										-->
-										<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-										<!-- 3. 실행 스크립트 -->
-										<script charset="UTF-8">
-											new daum.roughmap.Lander({
-												"timestamp" : "1650433870829",
-												"key" : "29wdy",
-												//"mapWidth" : "1400",
-												"mapHeight" : "600"
-											}).render();
-										</script>
-								</div>
-								<div class="town-info">
-									<div class="town-info__inner">
-										<ul class="d-flex">
-											<li class="town-address">
-												<p><i></i>Address</p>
-												<p>(24600) 강원도 인제군 서화면 금강로 1630</p>
-											</li>
-											<li class="town-tel">
-												<p><i></i>Tel</p>
-												<p>033-463-5155∼7</p>
-											</li>
-											<li class="town-fax">
-												<p><i></i>Fax</p>
-												<p>033-463-5158</p>
-											</li>
-											<li class="town-mail">
-												<p><i></i>E-mail</p>
-												<p>dmzecopeace@gmail.com</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+                        <div class="list-bottom">
+                            <div class="button-wrap mt_40">
+                                <button type="button" class="button-deepgray">삭제</button>
+                                <button type="button" class="button-green">저장</button>
+                            </div>
 						</div>
-                        
 
                     </div>
 

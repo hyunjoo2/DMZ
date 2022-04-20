@@ -268,17 +268,17 @@ header .gnb-menu .depth2 ul li a:hover { color: #3f8501; }
 
 header.open { background: #ffffff; -webkit-box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.13); box-shadow: 0.3rem 0.3rem 1.5rem rgba(0, 0, 0, 0.13); }
 
-header.open .logo a { background: url(../image/common/logo.png) !important; }
+header.open .logo a { background: url(../image/common/logo.png) !important; background-size: cover !important; }
 
 header.open .gnb_wrap { border-bottom: 1px solid #ededed; }
 
 header.open .gnb-menu > li > a { color: #000000 !important; text-shadow: none !important; }
 
-header.open .sns-blog a { background: url(../image/common/icon-blog.png) no-repeat center !important; }
+header.open .sns-blog a { background: url(../image/common/icon-blog.png) no-repeat center/2.2rem 1.8rem !important; }
 
-header.open .sns-facebook a { background: url(../image/common/icon-facebook.png) no-repeat center !important; }
+header.open .sns-facebook a { background: url(../image/common/icon-facebook.png) no-repeat center/1rem 1.8rem !important; }
 
-header.open .sns-insta a { background: url(../image/common/icon-insta.png) no-repeat center !important; }
+header.open .sns-insta a { background: url(../image/common/icon-insta.png) no-repeat center/1.9rem !important; }
 
 header.open .sitemap button span { background: #000000 !important; }
 

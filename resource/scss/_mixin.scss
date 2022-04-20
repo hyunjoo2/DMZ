@@ -161,7 +161,10 @@ $height-l:936px;
 @mixin text-overflow3 {
   overflow:hidden;text-overflow:ellipsis;line-height:3.2rem;height:9.6rem;
 	word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical
-
+}
+@mixin  text-overflowN( $height:3.2rem, $line-height:3.2rem, $num:1, ) {
+  overflow:hidden;text-overflow:ellipsis;line-height:$line-height;height:$height;
+	word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:$num;-webkit-box-orient:vertical
 }
 
 

@@ -184,17 +184,17 @@ header {
         .sns{
             &-blog{
                 a{
-                    background: url(../image/common/icon-blog.png) no-repeat center !important;
+                    background: url(../image/common/icon-blog.png) no-repeat center / 2.2rem 1.8rem !important;
                 }
             }
             &-facebook{
                 a{
-                    background: url(../image/common/icon-facebook.png) no-repeat center !important;
+                    background: url(../image/common/icon-facebook.png) no-repeat center / 1rem 1.8rem !important;
                 }
             }
             &-insta{
                 a{
-                    background: url(../image/common/icon-insta.png) no-repeat center !important;
+                    background: url(../image/common/icon-insta.png) no-repeat center / 1.9rem !important;
                 }
             }
         }
