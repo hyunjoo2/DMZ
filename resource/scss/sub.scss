@@ -1197,7 +1197,115 @@
     }
 }
 
+/* 창립선언문 */ 
+.declare{
+    &__inner{
+        width: calc(100% - 12rem);
+        margin: 0 auto;
+        background: url(../image/sub/bg-declare.png) no-repeat top center;
+        background-size: 100% 100%;
 
+    }
+    &-content{
+        padding:13rem 11.5rem 11rem 9rem;
+        .tit{
+            margin-bottom: 8.5rem;
+            font : {
+                size:2.6rem;
+                weight: 500;
+            }
+            line-height: 100%;
+        }
+    }
+    &-body{
+        font-size:1.8rem;
+        line-height: 3.4rem;
+        *{
+            font-size:1.8rem;
+            font-weight: 400;
+        }
+    }
+    &-footer{
+        margin-top:9rem;
+        .date{
+            margin-bottom:3rem;
+            font-size: 1.8rem;
+            line-height: 100%;
+        }
+        font : {
+            size: 2.2rem;
+            weight:500;
+        }
+    }
+}
+
+/* 교육시설 */ 
+.fac{
+    &__inner{
+        .img-wrap{
+            p{
+                margin-top: 1.5rem;
+                font-size: 1.6rem;
+                text-align: center;
+            }
+        }
+    }
+    &-top{
+        &__right{
+            flex:1;
+            margin-top: 5rem;
+            margin-left: 7rem;
+        }
+        .img-wrap{
+            flex:1;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    &-title{
+        margin-bottom: 2rem;
+        font : {
+            size: 3rem;
+            weight:500;
+        }
+    }
+    &-des{
+        font : {
+            size: 1.8rem;
+        }
+        line-height: 3.2rem;
+        word-break: keep-all;
+    }
+    &-bottom{
+        &__inner{
+            position:relative;
+            padding:6rem 0;
+            margin-top: 10rem;
+            margin-left: -1.1rem;
+            margin-right: -1.1rem;
+            justify-content: space-between;
+            background: #f7f7f7;
+            &::before{
+                position:absolute;
+                top:0;
+                left: -100%;
+                width:300%;
+                height: 100%;
+                background: #f7f7f7;
+                content:"";
+                z-index: -1;
+            }
+            .img-wrap{
+                flex:1;
+                img{
+                    max-width: 100%;
+                    padding: 0 1.1rem;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -1297,6 +1405,16 @@
                     }
                 }
             }
+        }
+    }
+
+    .declare{
+        &__inner{
+            background: none;
+            border:.3rem solid #3f8501;
+        }
+        &-content{
+            padding:5rem;
         }
     }
 }
