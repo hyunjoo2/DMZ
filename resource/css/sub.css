@@ -559,9 +559,9 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .table-wrap.tdBorder ul { padding: 0rem 1.3rem; text-align: left; }
 
-.table-wrap.tdBorder ul li { position: relative; padding-left: 1rem; }
+.table-wrap.tdBorder ul li { position: relative; padding-left: 1rem; line-height: 3.4rem; }
 
-.table-wrap.tdBorder ul li::before { position: absolute; top: 1.2rem; left: 0; width: 2px; height: 2px; background: #000000; content: ""; }
+.table-wrap.tdBorder ul li::before { position: absolute; top: 1.6rem; left: 0; width: 2px; height: 2px; background: #000000; content: ""; }
 
 .table-wrap.tdBorder ul.list-dashed { padding: 0; }
 
@@ -812,6 +812,8 @@ body.overflow-hidden #fp-nav { display: none; }
 /* 교육시설 */
 .fac__inner .img-wrap p { margin-top: 1.5rem; font-size: 1.6rem; text-align: center; }
 
+.fac__inner .img-wrap p span { font-size: 1.6rem; }
+
 .fac-top__right { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-top: 5rem; margin-left: 7rem; }
 
 .fac-top .img-wrap { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
@@ -819,6 +821,8 @@ body.overflow-hidden #fp-nav { display: none; }
 .fac-top .img-wrap img { max-width: 100%; }
 
 .fac-title { margin-bottom: 2rem; font-size: 3rem; font-weight: 500; }
+
+.fac-title span { font-size: 3rem; }
 
 .fac-des { font-size: 1.8rem; line-height: 3.2rem; word-break: keep-all; }
 
@@ -829,6 +833,18 @@ body.overflow-hidden #fp-nav { display: none; }
 .fac-bottom__inner .img-wrap { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .fac-bottom__inner .img-wrap img { max-width: 100%; padding: 0 1.1rem; }
+
+.fac-bottom__inner.item4 .item4__inner { -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -2.5rem; }
+
+.fac-bottom__inner.item4 .item4__inner .img-wrap { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+
+.fac-bottom__inner.item4 .item4__inner .img-wrap img { padding: 2.5rem; }
+
+.fac-bottom__inner .item5__inner { -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -1.1rem; }
+
+.fac-bottom__inner .item5__inner .img-wrap { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: calc(100% / 3); }
+
+.fac-bottom__inner .item5__inner .img-wrap img { padding: 1.1rem; }
 
 /*=================================================================================================
 ============================================ responsive ========================================
@@ -849,4 +865,6 @@ body.overflow-hidden #fp-nav { display: none; }
   .town-info ul li:not(:first-child) { width: 50%; }
   .town-info ul li p { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   .declare__inner { background: none; border: .3rem solid #3f8501; }
-  .declare-content { padding: 5rem; } }
+  .declare-content { padding: 5rem; }
+  .tab { overflow-x: scroll; }
+  .tab li { -webkit-box-flex: 0; -ms-flex: none; flex: none; width: 16rem; } }
