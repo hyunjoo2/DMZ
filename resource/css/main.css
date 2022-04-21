@@ -447,6 +447,8 @@ body.overflow-hidden #fp-nav { display: none; }
 
 #section2 .banner__inner .swiper-pagination-bullet-active { background: #5f9130; }
 
+#section2 .tab-content { height: calc(100% - 5.1rem); }
+
 #section2 > div, #section3 > div { max-width: 120rem; margin: 0 auto; }
 
 #section2 .text, #section3 .text { text-align: center; }
@@ -541,8 +543,6 @@ body.overflow-hidden #fp-nav { display: none; }
 .nav-plus a { font-size: 1.6rem; line-height: 100%; color: #555555; text-decoration: underline; }
 
 .nav-plus a:hover { text-decoration: underline; }
-
-.tab-content { height: calc(100% - 5.1rem); }
 
 .tab-content .tab-pane { height: 100%; background: #ffffff; }
 
