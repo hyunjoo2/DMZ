@@ -182,3 +182,22 @@ $height-l:936px;
   transform: translate(-50%, -50%); 
 }
 
+@mixin positionCenter($w, $h, $p:absolute) {
+  @if (
+    $p == absolute 
+    or $p == fixed 
+    or not $p == relative
+    or not $p == static
+    ) {
+      //unitless :: 단위가 있는지 없는지 확인 해 주는 내장함수
+      width: if(unitless($w), #{$w}px, $w);
+      height: if(unitless($h), #{$h}px, $h);
+      position: $p;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+  }
+  
+}

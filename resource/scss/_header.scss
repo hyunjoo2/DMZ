@@ -565,7 +565,19 @@ body{
             background: #ffffff;
             &_wrap{
                 padding:0 3rem;
+                .inner{
+                    padding:0;
+                }
             }
+        }
+        &.main{
+            .gnb{
+                &_wrap{
+                    .inner{
+                        padding:0;
+                    }
+                }
+            } 
         }
     }
 }

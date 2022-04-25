@@ -342,3 +342,10 @@ p{
 label{
     margin: 0;
 }
+
+
+@for $index from 1 through 3 {
+    .through:nth-child(#{$index}){
+        width:20px * $index;
+    }
+}
