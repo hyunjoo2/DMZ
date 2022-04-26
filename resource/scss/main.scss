@@ -682,6 +682,7 @@
                 border:none;
                 font-size:2.2rem;
                 text-indent: 3rem;
+                border-radius: 0;
                 &::placeholder{
                     color:#434a5c;
                 }
@@ -691,6 +692,7 @@
                 height:7rem;
                 font-size:2.4rem;
                 color:#ffffff;
+                flex:none;
             }
         }
         &-des{
@@ -866,6 +868,20 @@
                     }
                 }
             }
+        }
+    }
+    .tab-content .tab-pane .notice-item {
+        &.first{
+            a{
+                font-size: 1.8rem;
+            }
+        }
+        .tit{
+            height: 2.8rem;
+            line-height: 2.8rem;
+        }
+        .date{
+            font-size: 1.8rem;
         }
     }
 }

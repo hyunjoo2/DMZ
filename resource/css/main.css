@@ -236,7 +236,7 @@ header { position: absolute; top: 0; left: 0; width: 100%; background: transpare
 
 header.main { position: fixed; width: 100%; z-index: 1; -webkit-box-shadow: 0.3rem 0.3rem 1.9rem rgba(0, 0, 0, 0.1); box-shadow: 0.3rem 0.3rem 1.9rem rgba(0, 0, 0, 0.1); }
 
-header.main .logo a { background: url(../image/common/logo.png) no-repeat center; }
+header.main .logo a { background: url(../image/common/logo.png) no-repeat center; background-size: cover; }
 
 header.main .gnb_wrap { background: #ffffff; }
 
@@ -322,6 +322,8 @@ header .sitemap button span { width: 100%; height: .4rem; background: #ffffff; }
 
 header .sitemap button span:last-child { width: 2rem; margin-left: auto; }
 
+header .sitemap-header .logo { display: none; }
+
 header .sitemap-menu { display: none; }
 
 header .sitemap.open { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; z-index: 2; -webkit-box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.14); box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.14); }
@@ -386,9 +388,11 @@ body.overflow-hidden #fp-nav { display: none; }
   header.main .gnb_wrap .inner { padding: 0; } }
 
 @media screen and (max-width: 720px) { header.main { height: 10rem !important; }
-  header .sitemap.open .sitemap-menu { height: 100vh; overflow: auto; }
+  header .sitemap.open .sitemap-header { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 100%; height: 10rem; padding: 0 3rem; }
+  header .sitemap.open .sitemap-header .logo { display: block; }
+  header .sitemap.open .sitemap-menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100vh; overflow: auto; }
   header .sitemap.open .sitemap-menu .sitemap-button { position: fixed; z-index: 3; }
-  header .sitemap.open .sitemap-menu__inner > ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; margin-top: 10rem; }
+  header .sitemap.open .sitemap-menu__inner > ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; margin-top: 0rem; padding-top: 0rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li { position: relative; padding: 4rem; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   header .sitemap.open .sitemap-menu__inner > ul > li + li::before { width: 100%; height: 1rem; background: #F6F7F9; z-index: -1; }
   header .sitemap.open .sitemap-menu__inner > ul > li:last-child { padding-bottom: 10rem; }
@@ -638,7 +642,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .section4 .newsletter-box { padding: .4rem; background: -webkit-gradient(linear, left top, right top, from(#8dda4e), to(#63b023)); background: linear-gradient(90deg, #8dda4e, #63b023); -webkit-box-shadow: 1.6rem 1.6rem 3.6rem rgba(0, 0, 0, 0.28); box-shadow: 1.6rem 1.6rem 3.6rem rgba(0, 0, 0, 0.28); }
 
-.section4 .newsletter-box input { width: 100%; height: 7.2rem; padding-left: 0; border: none; font-size: 2.2rem; text-indent: 3rem; }
+.section4 .newsletter-box input { width: 100%; height: 7.2rem; padding-left: 0; border: none; font-size: 2.2rem; text-indent: 3rem; border-radius: 0; }
 
 .section4 .newsletter-box input::-webkit-input-placeholder { color: #434a5c; }
 
@@ -648,7 +652,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .section4 .newsletter-box input::placeholder { color: #434a5c; }
 
-.section4 .newsletter-box button { width: 14rem; height: 7rem; font-size: 2.4rem; color: #ffffff; }
+.section4 .newsletter-box button { width: 14rem; height: 7rem; font-size: 2.4rem; color: #ffffff; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 
 .section4 .newsletter-des { margin-top: 6rem; padding: 5rem 3rem; background: #5f9130; font-size: 1.8rem; font-weight: 200; color: #ffffff; text-align: center; line-height: normal; }
 
@@ -688,4 +692,7 @@ body.overflow-hidden #fp-nav { display: none; }
   .quickmenu__inner div > a { padding-top: 5.5rem; padding-left: 1rem; padding-right: 1rem; }
   .quickmenu__inner div > a::before, .quickmenu__inner div > a::after { display: none; }
   .quickmenu__inner div .txt { visibility: visible; }
-  .quickmenu__inner div .txt br { display: none; } }
+  .quickmenu__inner div .txt br { display: none; }
+  .tab-content .tab-pane .notice-item.first a { font-size: 1.8rem; }
+  .tab-content .tab-pane .notice-item .tit { height: 2.8rem; line-height: 2.8rem; }
+  .tab-content .tab-pane .notice-item .date { font-size: 1.8rem; } }
