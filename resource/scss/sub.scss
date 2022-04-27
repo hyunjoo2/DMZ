@@ -468,6 +468,7 @@
                     position:relative;
                     padding-left:1rem;
                     line-height: 3.4rem;
+                    font-size: 1.8rem;
                     &::before{
                         position:absolute;
                         top:1.6rem;
@@ -1534,7 +1535,6 @@
                         padding: 0;
                     }
                 }
-
                 @for $i from 4 through 5 {
                     .item#{$i}{
                         &__inner{

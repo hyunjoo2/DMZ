@@ -1039,7 +1039,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .table-wrap.tdBorder ul { padding: 0rem 1.3rem; text-align: left; }
 
-.table-wrap.tdBorder ul li { position: relative; padding-left: 1rem; line-height: 3.4rem; }
+.table-wrap.tdBorder ul li { position: relative; padding-left: 1rem; line-height: 3.4rem; font-size: 1.8rem; }
 
 .table-wrap.tdBorder ul li::before { position: absolute; top: 1.6rem; left: 0; width: 2px; height: 2px; background: #000000; content: ""; }
 
