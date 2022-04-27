@@ -404,6 +404,9 @@
                         background: url(../image/sub/icon-file.png);
                     }
                 }
+                a{
+                    font-size: 1.8rem;
+                }
             }
         }
         tbody{
@@ -1444,12 +1447,10 @@
         }
     }
 
-    
-
     .tab{
         overflow-x: scroll;
         li{
-            min-width:16rem;
+            min-width:23rem;
         }
     }
 
@@ -1501,5 +1502,54 @@
                 padding:1rem 3rem;
             }
         }
-    } 
+    }
+    
+    /* 시설안내 */ 
+    .fac{
+        &-top{
+            >.d-flex{
+                flex-direction: column-reverse;
+            }
+            &__right{
+                margin-top: 0;
+                margin-left: 0;
+                margin-bottom: 5rem;
+            }
+        }
+        &-bottom{
+            &__inner{
+                flex-direction: column;
+                margin : {
+                    top: 3rem;
+                    left: 0;
+                    right:0;
+                }
+                padding:3rem 0;
+                .img-wrap{
+                    &+.img-wrap{
+                        margin-top: 2rem;
+                    }
+                    img{
+                        width:100%;
+                        padding: 0;
+                    }
+                }
+
+                @for $i from 4 through 5 {
+                    .item#{$i}{
+                        &__inner{
+                            flex-direction: column;
+                            margin: 0 !important;
+                            .img-wrap{
+                                width:100% !important;
+                                img{
+                                    padding:0 !important;
+                                }
+                            }
+                        }    
+                    }
+                }
+            }
+        }
+    }
 }
