@@ -205,13 +205,11 @@
             }
         }
     }
-    &3{
-        background: url(../image/main/bg-section3.png) no-repeat center;
-        background-size: cover;     
-    }
-    &4{
-        background: url(../image/main/bg-section4.jpg) no-repeat center;
-        background-size: cover;     
+    @for $i from 3 through 4 {
+        &#{$i} {
+            background: url(../image/main/bg-section#{$i}.png) no-repeat center;
+            background-size: cover;     
+        }
     }
 }
 .quickmenu{
@@ -245,16 +243,11 @@
                     
                 }
             }
-            &:nth-child(1){
-                background: url(../image/main/bg-quickmenu1.png);
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}){
+                    background: url(../image/main/bg-quickmenu#{$i}.png);    
+                }                                                                                                                                                                                                                                                                                                           
             }
-            &:nth-child(2){
-                background: url(../image/main/bg-quickmenu2.png);
-            }
-            &:nth-child(3){
-                background: url(../image/main/bg-quickmenu3.png);
-            }
-            
             &:hover{
                 a{
                     padding-top:5.5rem;
