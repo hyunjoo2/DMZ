@@ -319,6 +319,9 @@
         margin-bottom:0;
         color:#000000;
         border-top:1px solid #000000;
+        table{
+            margin-bottom: 0;
+        }
         thead{
             background: #f4f6f1;
             tr{
@@ -1548,6 +1551,21 @@
                             }
                         }    
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:425px){
+    .list{
+        &-bottom{
+            &__inner{
+                display: flex;
+                flex-direction: column-reverse;
+                .button-wrap{
+                    position:unset;
+                    margin-bottom: 2rem;
                 }
             }
         }
