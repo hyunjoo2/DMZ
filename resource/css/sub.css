@@ -135,7 +135,7 @@
 
 .mt_80 { margin-top: 8rem; }
 
-.mt_90 { margin-top: 9rem; }
+.mt_90 { margin-top: 9rem !important; }
 
 .mt_100 { margin-top: 10rem; }
 
@@ -1292,7 +1292,7 @@ body.overflow-hidden #fp-nav { display: none; }
 .declare-footer .date { margin-bottom: 3rem; font-size: 1.8rem; line-height: 100%; }
 
 /* 교육시설 */
-.fac__inner .img-wrap p { margin-top: 1.5rem; font-size: 1.6rem; text-align: center; }
+.fac__inner .img-wrap p { margin-top: 1.5rem; font-size: 1.6rem; text-align: center; line-height: normal; }
 
 .fac__inner .img-wrap p span { font-size: 1.6rem; }
 
@@ -1301,6 +1301,10 @@ body.overflow-hidden #fp-nav { display: none; }
 .fac-top .img-wrap { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
 .fac-top .img-wrap img { max-width: 100%; }
+
+.fac-top__img > div { margin: -1.5rem; }
+
+.fac-top__img .img-wrap img { width: 100%; padding: 1.5rem; }
 
 .fac-title { margin-bottom: 2rem; font-size: 3rem; font-weight: 500; }
 
@@ -1318,9 +1322,9 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .fac-bottom__inner.item4 .item4__inner { -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -2.5rem; }
 
-.fac-bottom__inner.item4 .item4__inner .img-wrap { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+.fac-bottom__inner.item4 .item4__inner .img-wrap { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; padding: 2.5rem; }
 
-.fac-bottom__inner.item4 .item4__inner .img-wrap img { padding: 2.5rem; }
+.fac-bottom__inner.item4 .item4__inner .img-wrap img { width: 100%; padding: 0; }
 
 .fac-bottom__inner .item5__inner { -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -1.1rem; }
 
@@ -1366,6 +1370,7 @@ body.overflow-hidden #fp-nav { display: none; }
   /* 시설안내 */
   .fac-top > .d-flex { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
   .fac-top__right { margin-top: 0; margin-left: 0; margin-bottom: 5rem; }
+  .fac-top__img > div { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .fac-bottom__inner { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-top: 3rem; margin-left: 0; margin-right: 0; padding: 3rem 0; }
   .fac-bottom__inner .img-wrap + .img-wrap { margin-top: 2rem; }
   .fac-bottom__inner .img-wrap img { width: 100%; padding: 0; }
