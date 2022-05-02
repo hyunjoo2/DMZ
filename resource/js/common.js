@@ -8,45 +8,7 @@ $(function () {
    
    
 function gnbSubMenu(){
-	var gnb = $(".gnb-menu");
-	var gnbChild = $(".gnb-menu > li");
-	var gnbTitle = gnb.find('a');
-
-	gnbChild.on({
-		mouseover: function(){
-			$(this).addClass('on')			
-		},
-		mouseleave: function(){
-			$(this).removeClass('on');
-		}
-	});
-	gnbTitle.mouseover(function(){
-		headerOpen();
-	});
-	$('.header').mouseleave(function(){
-		headerClose();
-		//$('body').css('overflow', 'initial')
-	});
-
-	function headerOpen() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 open
-		TweenMax.killAll();
-		TweenMax.to($(".header"), .5, {
-			height : 480,
-			ease : 'easeOutExpo'
-		});
-		$(".header").addClass("open");
-	}
-
-	function headerClose() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 close
-		TweenMax.killAll();
-		TweenMax.to($(".header"), .5, {
-			height : 100,
-			ease : 'easeOutExpo',
-			onComplete : function() {
-				$(".header").removeClass("open");
-			}
-		});
-	}
+	
 
 }
 
@@ -92,6 +54,47 @@ $(function(){
 			//sitemap-menu
 			$(".sitemap").addClass("mobile");
 			$(".sitemap-menu__inner > ul > li").children().next().slideUp();
+
+
+			var gnb = $(".gnb-menu");
+			var gnbChild = $(".gnb-menu > li");
+			var gnbTitle = gnb.find('a');
+
+			gnbChild.on({
+				mouseover: function(){
+					$(this).addClass('on')			
+				},
+				mouseleave: function(){
+					$(this).removeClass('on');
+				}
+			});
+			gnbTitle.mouseover(function(){
+				headerOpen();
+			});
+			$('.header').mouseleave(function(){
+				headerClose();
+				//$('body').css('overflow', 'initial')
+			});
+
+			function headerOpen() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 open
+				TweenMax.killAll();
+				TweenMax.to($(".header"), .5, {
+					height : 480,
+					ease : 'easeOutExpo'
+				});
+				$(".header").addClass("open");
+			}
+
+			function headerClose() {  //Tweenmax를 이용한 헤더 메뉴 슬라이드 close
+				TweenMax.killAll();
+				TweenMax.to($(".header"), .5, {
+					height : 100,
+					ease : 'easeOutExpo',
+					onComplete : function() {
+						$(".header").removeClass("open");
+					}
+				});
+			}
 			
 			
 		}  else{
