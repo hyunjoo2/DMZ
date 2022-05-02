@@ -387,7 +387,7 @@ body.overflow-hidden #fp-nav { display: none; }
   header .gnb_wrap .inner { padding: 0; }
   header.main .gnb_wrap .inner { padding: 0; } }
 
-@media screen and (max-width: 720px) { header.main { height: 10rem !important; }
+@media screen and (max-width: 720px) { header.main { height: 10rem; }
   header .sitemap.open .sitemap-header { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 100%; height: 10rem; padding: 0 3rem; }
   header .sitemap.open .sitemap-header .logo { display: block; }
   header .sitemap.open .sitemap-menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100vh; overflow: auto; }
@@ -399,9 +399,9 @@ body.overflow-hidden #fp-nav { display: none; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a { width: 100%; margin-bottom: 0; font-weight: 600; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a + .depth2 { margin-top: 4rem; }
   header .sns ul li { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  header .sns-blog a { width: 2.7rem !important; height: 2.3rem !important; background-size: 2.7rem 2.5rem !important; }
+  header .sns-blog a { width: 2.7rem !important; height: 2.3rem !important; background-size: 2.7rem 2.3rem !important; }
   header .sns-facebook a { width: 1.5rem !important; height: 2.3rem !important; background-size: 1.5rem 2.3rem !important; }
-  header .sns-insta a { width: 3.4rem !important; height: 3.4rem !important; background-size: 3.4rem 3.4rem !important; } }
+  header .sns-insta a { width: 3rem !important; height: 3rem !important; background-size: 3rem 3rem !important; } }
 
 /* footer */
 /* main footer */

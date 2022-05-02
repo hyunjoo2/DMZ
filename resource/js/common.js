@@ -53,6 +53,7 @@ function gnbSubMenu(){
 function sitemap(){
 	$(".sitemap-button>button").click(function(){
 		$(this).parent().parent().addClass("open");
+		$(this).parents().find(".header").addClass("h-100");
 		$("html, body").addClass("overflow-hidden");
 		
 		$('body').on('scroll touchmove mousewheel', function(event) {
@@ -63,6 +64,7 @@ function sitemap(){
 	});
 	$(".sitemap-menu .button-close").click(function(){
 		$(this).parents().find(".sitemap").removeClass("open");
+		$(this).parents().find(".header").removeClass("h-100");
 		$("html, body").removeClass("overflow-hidden");
 		$('body').off('scroll touchmove mousewheel');
 	})

@@ -591,7 +591,7 @@ body{
 @media screen and(max-width:720px){
     header{
         &.main{
-            height: 10rem !important;    
+            height: 10rem;    
         }
         .sitemap{
             &.open{
@@ -660,7 +660,7 @@ body{
                 a{
                     width: 2.7rem !important;
                     height: 2.3rem !important;
-                    background-size: 2.7rem 2.5rem !important;
+                    background-size: 2.7rem 2.3rem !important;
                 }
             }
             &-facebook{
@@ -672,9 +672,9 @@ body{
             }
             &-insta{
                 a{
-                    width: 3.4rem !important;
-                    height: 3.4rem !important;
-                    background-size: 3.4rem 3.4rem !important;
+                    width: 3rem !important;
+                    height: 3rem !important;
+                    background-size: 3rem 3rem !important;
                 }
             }
         }
