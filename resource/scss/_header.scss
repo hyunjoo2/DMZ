@@ -485,6 +485,13 @@ header {
 
 .fp-viewing{
     &-firstPage{
+        .header{
+            &.main{
+                .gnb_wrap{
+                    border-bottom: 1px solid #ededed;
+                }
+            }
+        }
         header {
             .logo{
                 a{
@@ -608,7 +615,6 @@ body{
                         }
                     }
                     &-menu{
-
                         @include flex-column;
                         height: 100vh;
                         overflow: auto;
@@ -638,9 +644,14 @@ body{
                                     width: 100%;
                                     margin-bottom: 0;
                                     font-weight: 600;
+                                    font-size: 3.4rem;
                                     &+.depth2{
                                         //display: none;
                                         margin-top: 4rem;
+                                        a{
+                                            font-size: 2.8rem;
+                                            line-height:6.5rem;
+                                        }
                                     }
                                 }
                             }  

@@ -360,6 +360,8 @@ header .sitemap.open .sitemap-menu .depth2 ul li a { font-size: 1.8rem; color: #
 
 header .sitemap.open .sitemap-menu .depth2 ul li a:hover { color: #3f8501; }
 
+.fp-viewing-firstPage .header.main .gnb_wrap { border-bottom: 1px solid #ededed; }
+
 .fp-viewing-firstPage header .logo a { background: url(../image/common/logo-white.png) no-repeat center; background-size: cover; }
 
 .fp-viewing-firstPage header .gnb_wrap { background: transparent; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
@@ -396,8 +398,9 @@ body.overflow-hidden #fp-nav { display: none; }
   header .sitemap.open .sitemap-menu__inner > ul > li { position: relative; padding: 4rem; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   header .sitemap.open .sitemap-menu__inner > ul > li + li::before { width: 100%; height: 1rem; background: #F6F7F9; z-index: -1; }
   header .sitemap.open .sitemap-menu__inner > ul > li:last-child { padding-bottom: 10rem; }
-  header .sitemap.open .sitemap-menu__inner > ul > li > a { width: 100%; margin-bottom: 0; font-weight: 600; }
+  header .sitemap.open .sitemap-menu__inner > ul > li > a { width: 100%; margin-bottom: 0; font-weight: 600; font-size: 3.4rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a + .depth2 { margin-top: 4rem; }
+  header .sitemap.open .sitemap-menu__inner > ul > li > a + .depth2 a { font-size: 2.8rem; line-height: 6.5rem; }
   header .sns ul li { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   header .sns-blog a { width: 2.7rem !important; height: 2.3rem !important; background-size: 2.7rem 2.3rem !important; }
   header .sns-facebook a { width: 1.5rem !important; height: 2.3rem !important; background-size: 1.5rem 2.3rem !important; }
