@@ -262,6 +262,23 @@
             }
         }
     }
+    &-dot{
+        li{
+            position:relative;
+            padding-left: 1rem;
+            line-height: 3.2rem;
+            &::before{
+                display:block;
+                position:absolute;
+                top:1.5rem;
+                left:.3rem;
+                width:2px;
+                height:2px;
+                background: #000000;
+                content:""
+            }
+        }
+    }
 }
 
 .paging{
@@ -988,15 +1005,21 @@
             margin-top: 2rem;
         }
     }
-    .img-wrap{
+    &-img{
         @include display-flex;
         @include justify-center;
         margin-top: 6rem;
         padding: 6rem 0;
         background: #f7f7f7;
-        img{
+        .img-wrap{
             padding:0 1rem;
+            img{
+                width:100%;
+            }
         }
+    }
+    .sub-title2{
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -1524,9 +1547,9 @@
 
     /* 기본프로그램 */ 
     .ori{
-        .img-wrap{
+        &-img{
             @include flex-column;
-            img{
+            .img-wrap{
                 padding:1rem 3rem;
             }
         }

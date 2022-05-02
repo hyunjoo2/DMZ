@@ -973,6 +973,10 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .list-bottom__inner .button-wrap button { width: 11.3rem; height: 4.3rem; background: #3f8501; color: #ffffff; font-size: 1.6rem; }
 
+.list-dot li { position: relative; padding-left: 1rem; line-height: 3.2rem; }
+
+.list-dot li::before { display: block; position: absolute; top: 1.5rem; left: .3rem; width: 2px; height: 2px; background: #000000; content: ""; }
+
 .paging__inner a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 4.3rem; height: 4.3rem; margin: 0 .25rem; font-size: 1.5rem; color: #888888; }
 
 .paging__inner a.first, .paging__inner a.prev, .paging__inner a.next, .paging__inner a.last { border: 1px solid #aaaaaa; background-repeat: no-repeat; background-position: center; }
@@ -1205,9 +1209,13 @@ body.overflow-hidden #fp-nav { display: none; }
 /* 오리엔테이션 */
 .ori > p + p { margin-top: 2rem; }
 
-.ori .img-wrap { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 6rem; padding: 6rem 0; background: #f7f7f7; }
+.ori-img { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 6rem; padding: 6rem 0; background: #f7f7f7; }
 
-.ori .img-wrap img { padding: 0 1rem; }
+.ori-img .img-wrap { padding: 0 1rem; }
+
+.ori-img .img-wrap img { width: 100%; }
+
+.ori .sub-title2 { margin-bottom: 2.5rem; }
 
 /* 현장탐방 */
 .location ul { margin: 0 -1.8rem; }
@@ -1365,8 +1373,8 @@ body.overflow-hidden #fp-nav { display: none; }
   .filebox label { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   .filebox .upload-name.w-500 { width: 100%; }
   /* 기본프로그램 */
-  .ori .img-wrap { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-  .ori .img-wrap img { padding: 1rem 3rem; }
+  .ori-img { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .ori-img .img-wrap { padding: 1rem 3rem; }
   /* 시설안내 */
   .fac-top > .d-flex { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
   .fac-top__right { margin-top: 0; margin-left: 0; margin-bottom: 5rem; }
