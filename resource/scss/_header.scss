@@ -656,6 +656,27 @@ body{
                     @include align-center; 
                 }
             }
+            &-blog{
+                a{
+                    width: 3.2rem !important;
+                    height: 2.8rem !important;
+                    background-size: 3.2rem 2.8rem !important;
+                }
+            }
+            &-facebook{
+                a{
+                    width: 2rem !important;
+                    height: 2.8rem !important;
+                    background-size: 2rem 2.8rem !important;
+                }
+            }
+            &-insta{
+                a{
+                    width: 3.9rem !important;
+                    height: 3.9rem !important;
+                    background-size: 3.9rem 3.9rem !important;
+                }
+            }
         }
     }
 }
