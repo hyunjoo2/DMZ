@@ -413,7 +413,9 @@
     }
     &-item{
         width: 19rem;
+        max-width:19rem;
         height:5.1rem;
+        flex:1;
         &+li:not(.nav-plus){
             border-left: 1px solid #ffffff;
         }
@@ -421,7 +423,9 @@
     &-plus{
         @include display-flex;
         align-items: center;
+        margin-left: auto;
         a{
+            margin-left: 2rem;
             font-size: 1.6rem;
             line-height: 100%;
             color:#555555;
@@ -769,15 +773,15 @@
                 flex-wrap: wrap;
                 margin-top: 4rem;
             }
-            .tab-content{
-                .tab-pane{
-                    .notice{
-                        &__inner{
-                            padding:2rem 4rem;
-                        }
-                    }
-                }
-            }
+            // .tab-content{
+            //     .tab-pane{
+            //         .notice{
+            //             &__inner{
+            //                 padding:2rem 4rem;
+            //             }
+            //         }
+            //     }
+            // }
             .banner{
                 width:100%;
                 margin-left: 0;
@@ -833,6 +837,25 @@
                     }
                 }
             }
+            .banner{
+                max-height: 50rem;
+                &__inner{
+                    height: 100%;
+                    .swiper{
+                        &-container{
+                            height: 100%;
+                        }
+                        &-slide{
+                            a{
+                                height: 100%;
+                                img{
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .section:not(:first-child){
@@ -863,18 +886,31 @@
             }
         }
     }
-    .tab-content .tab-pane .notice-item {
-        &.first{
-            a{
+    .tab-content .tab-pane .notice{
+        &__inner{
+            padding:4rem;
+        }
+        &-item{
+            &.first{
+                a{
+                    font-size: 1.8rem;
+                    .tit{
+                        height: 7rem;
+                        line-height: 3.5rem;
+                    }
+                    .txt{
+                        font-size: 1.8rem;
+                        line-height: 3.2rem;
+                    }
+                }
+            }
+            .tit{
+                height: 2.8rem;
+                line-height: 2.8rem;
+            }
+            .date{
                 font-size: 1.8rem;
             }
-        }
-        .tit{
-            height: 2.8rem;
-            line-height: 2.8rem;
-        }
-        .date{
-            font-size: 1.8rem;
         }
     }
 }

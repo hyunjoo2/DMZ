@@ -1,24 +1,10 @@
 $(function () {
-	gnbOpen();
+	//gnbOpen();
 	sitemap();
-});
-
-
-function gnbOpen(){
-	// $(".gnb ul > li > a").mouseover(function(){
-	// 	$(".gnb-menu").addClass("open");
-	// 	$(this).parents().find(".gnb_wrap").addClass("open");
-	// });
-	// $(".gnb ul > li > a").mouseout(function(){
-	// 	$(".gnb-menu").removeClass("open");
-	// 	$(this).parents().find(".gnb_wrap").removeClass("open");
-	// });
-}
-
-//Tweenmax를 이용한 header  
-$(function(){
 	gnbSubMenu();
 });
+
+
    
    
 function gnbSubMenu(){
@@ -101,29 +87,13 @@ $(function(){
 				$(".gnb").removeClass("open");
 			});	
 
-
 			//sitemap-menu
 			$(".sitemap").addClass("mobile");
-
-			var gnbmenuLiMobile = $(".mobile .sitemap-menu__inner > ul > li");
-			$(gnbmenuLiMobile).children().next().hide();
-
-			$(gnbmenuLiMobile).click(function(){	
-				$(this).addClass("active");
-				//$(this).siblings().removeClass("active");
-				if($(this).hasClass("active")){
-					$(this).children().next().slideDown();
-					$(this).click(function(){
-						$(this).removeClass("active");
-						$(this).children().next().slideUp();
-					})
-				}else{
-					$(this).children().next().slideUp();
-				}
-			});
+			$(".sitemap-menu__inner > ul > li").children().next().slideUp();
+			
+			
 		}  else{
 			$(".sitemap").removeClass("mobile");
-			$(".sitemap-menu__inner > ul > li").children().next().show();
 			$(".sitemap-menu__inner > ul > li").children().next().slideDown();
 			
 		}
@@ -133,7 +103,12 @@ $(function(){
 	$(window).trigger("resize"); //강제로 호출하는 함수
 
 
-	
+	var gnbmenuLiMobile = $(".mobile .sitemap-menu__inner > ul > li");
+	$(gnbmenuLiMobile).children().next().slideUp();
+
+	$(gnbmenuLiMobile).children().click(function(){	
+		$(this).next().slideToggle();
+	});
 	
 
 
