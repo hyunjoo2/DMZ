@@ -909,7 +909,7 @@ body.overflow-hidden #fp-nav { display: none; }
   .greeting-top::before { top: 0; width: 100%; height: 100%; }
   .greeting-top .text__inner { padding: 3rem; }
   /* 창립선언문 */
-  .declare__inner { width: calc(100% - 6rem); background: none; border: .3rem solid #3f8501; }
+  .declare__inner { width: 100%; }
   .declare-content { display: none; }
   .declare__mobile { display: block; }
   /* form */

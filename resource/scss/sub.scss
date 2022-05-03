@@ -1528,9 +1528,7 @@
     /* 창립선언문 */ 
     .declare{
         &__inner{
-            width: calc(100% - 6rem);
-            background: none;
-            border:.3rem solid #3f8501;
+            width: 100%;
         }
         &-content{
             display: none;
