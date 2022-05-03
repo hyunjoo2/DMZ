@@ -397,7 +397,7 @@ body.overflow-hidden #fp-nav { display: none; }
   header .sitemap.open .sitemap-menu__inner > ul { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100%; margin-top: 0rem; padding-top: 0rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li { position: relative; padding: 4rem; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   header .sitemap.open .sitemap-menu__inner > ul > li + li::before { width: 100%; height: 1rem; background: #F6F7F9; z-index: -1; }
-  header .sitemap.open .sitemap-menu__inner > ul > li:last-child { padding-bottom: 10rem; }
+  header .sitemap.open .sitemap-menu__inner > ul > li:last-child { padding-bottom: 20rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a { width: 100%; margin-bottom: 0; font-weight: 600; font-size: 3.4rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a + .depth2 { margin-top: 4rem; }
   header .sitemap.open .sitemap-menu__inner > ul > li > a + .depth2 a { font-size: 2.8rem; line-height: 6.5rem; }
