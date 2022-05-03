@@ -98,6 +98,9 @@ header {
             }
         }
         .sitemap{
+            &.mobile{
+                flex:none;
+            }
             button{
                 span{
                     background:#000000;

@@ -254,6 +254,8 @@ header.main .sns-facebook a { width: 1rem; height: 1.8rem; background: url(../im
 
 header.main .sns-insta a { width: 1.9rem; height: 1.9rem; background: url(../image/common/icon-insta.png) no-repeat center; background-size: 1.9rem; }
 
+header.main .sitemap.mobile { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+
 header.main .sitemap button span { background: #000000; }
 
 header .gnb-menu > li { position: relative; }
