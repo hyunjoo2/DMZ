@@ -390,7 +390,7 @@ body.overflow-hidden #fp-nav { display: none; }
   header.main .gnb_wrap .inner { padding: 0; } }
 
 @media screen and (max-width: 720px) { header.main { height: 10rem; }
-  header .sitemap.open .sitemap-header { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 100%; height: 10rem; padding: 0 3rem; }
+  header .sitemap.open .sitemap-header { display: -webkit-box; display: flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 100%; height: 10rem; padding: 0 3rem; -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   header .sitemap.open .sitemap-header .logo { display: block; }
   header .sitemap.open .sitemap-menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100vh; overflow: auto; }
   header .sitemap.open .sitemap-menu .sitemap-button { position: fixed; z-index: 3; }
@@ -503,7 +503,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .list-gallery .img-wrap img { max-width: 100%; max-height: 100%; }
 
-.list-gallery .title { margin-top: 2rem; overflow: hidden; text-overflow: ellipsis; line-height: 2.3rem; height: 2.3rem; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; height: 2.5rem; font-size: 2rem; font-weight: 500; color: #000000; line-height: 2.5rem; }
+.list-gallery .title { margin-top: 2rem; overflow: hidden; text-overflow: ellipsis; line-height: 2.3rem; height: 2.3rem; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; height: 2.5rem; font-size: 2rem; font-weight: 500; color: #000000; line-height: 2.8rem; }
 
 .list-gallery .date { margin-top: 2.5rem; font-size: 1.6rem; color: #555555; line-height: 100%; }
 
@@ -513,7 +513,7 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .list-bottom__inner .button-wrap button { width: 11.3rem; height: 4.3rem; background: #3f8501; color: #ffffff; font-size: 1.6rem; }
 
-.list-dot li { position: relative; padding-left: 1rem; line-height: 3.2rem; }
+.list-dot li { position: relative; padding-left: 1rem; line-height: 3.2rem; font-size: 1.8rem; }
 
 .list-dot li::before { display: block; position: absolute; top: 1.5rem; left: .3rem; width: 2px; height: 2px; background: #000000; content: ""; }
 
@@ -856,11 +856,17 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .fac-top__img .img-wrap img { width: 100%; padding: 1.5rem; }
 
+.fac-top.item2 > div { margin: -2.5rem; }
+
+.fac-top.item2 .img-wrap { padding: 2.5rem; }
+
 .fac-title { margin-bottom: 2rem; font-size: 3rem; font-weight: 500; }
 
 .fac-title span { font-size: 3rem; }
 
 .fac-des { font-size: 1.8rem; line-height: 3.2rem; word-break: keep-all; }
+
+.fac-des * { font-size: 1.8rem; line-height: 3.2rem; }
 
 .fac-bottom__inner { position: relative; padding: 6rem 0; margin-top: 10rem; margin-left: -1.1rem; margin-right: -1.1rem; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; background: #f7f7f7; }
 
@@ -923,8 +929,9 @@ body.overflow-hidden #fp-nav { display: none; }
   .fac-top__right { margin-top: 0; margin-left: 0; margin-bottom: 5rem; }
   .fac-top__img > div { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
   .fac-bottom__inner { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin-top: 3rem; margin-left: 0; margin-right: 0; padding: 3rem 0; }
-  .fac-bottom__inner .img-wrap + .img-wrap { margin-top: 2rem; }
+  .fac-bottom__inner .img-wrap + .img-wrap { margin-top: 5rem; }
   .fac-bottom__inner .img-wrap img { width: 100%; padding: 0; }
+  .fac-bottom__inner.item4 .item4__inner .img-wrap { margin-top: 0; }
   .fac-bottom__inner .item4__inner { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin: 0 !important; }
   .fac-bottom__inner .item4__inner .img-wrap { width: 100% !important; }
   .fac-bottom__inner .item4__inner .img-wrap img { padding: 0 !important; }
