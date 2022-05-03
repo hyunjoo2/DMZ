@@ -839,6 +839,8 @@ body.overflow-hidden #fp-nav { display: none; }
 
 .declare-footer .date { margin-bottom: 3rem; font-size: 1.8rem; line-height: 100%; }
 
+.declare__mobile { display: none; }
+
 /* 교육시설 */
 .fac__inner .img-wrap p { margin-top: 1.5rem; font-size: 1.6rem; text-align: center; line-height: normal; }
 
@@ -908,7 +910,8 @@ body.overflow-hidden #fp-nav { display: none; }
   .greeting-top .text__inner { padding: 3rem; }
   /* 창립선언문 */
   .declare__inner { width: calc(100% - 6rem); background: none; border: .3rem solid #3f8501; }
-  .declare-content { padding: 5rem; }
+  .declare-content { display: none; }
+  .declare__mobile { display: block; }
   /* form */
   .filebox label { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
   .filebox .upload-name.w-500 { width: 100%; }

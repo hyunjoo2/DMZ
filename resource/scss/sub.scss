@@ -1272,6 +1272,9 @@
             weight:500;
         }
     }
+    &__mobile{
+        display: none;
+    }
 }
 
 /* 교육시설 */ 
@@ -1530,7 +1533,10 @@
             border:.3rem solid #3f8501;
         }
         &-content{
-            padding:5rem;
+            display: none;
+        }
+        &__mobile{
+            display: block;
         }
     }
 
