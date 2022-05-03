@@ -602,6 +602,8 @@ body{
         }
         .sitemap{
             &.open{
+                -ms-touch-action: none;
+                touch-action: none;
                 .sitemap{
                     &-header{
                         @include display-flex;
@@ -619,6 +621,8 @@ body{
                         @include flex-column;
                         height: 100vh;
                         overflow: auto;
+                        -ms-touch-action: none;
+                        touch-action: none;
                         .sitemap-button{
                             position: fixed;
                             z-index: 3;
