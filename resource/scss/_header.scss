@@ -494,7 +494,14 @@ header {
         .header{
             &.main{
                 .gnb_wrap{
-                    border-bottom: 1px solid #ededed;
+                    border-bottom: 1px solid rgba(255, 255, 255, .4);
+                }
+            }
+            &.main{
+                &.open{
+                    .gnb_wrap{
+                        border-bottom: 1px solid #ededed;
+                    }
                 }
             }
         }

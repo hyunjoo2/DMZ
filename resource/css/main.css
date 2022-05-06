@@ -364,7 +364,9 @@ header .sitemap.open .sitemap-menu .depth2 ul li a { font-size: 1.8rem; color: #
 
 header .sitemap.open .sitemap-menu .depth2 ul li a:hover { color: #3f8501; }
 
-.fp-viewing-firstPage .header.main .gnb_wrap { border-bottom: 1px solid #ededed; }
+.fp-viewing-firstPage .header.main .gnb_wrap { border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
+.fp-viewing-firstPage .header.main.open .gnb_wrap { border-bottom: 1px solid #ededed; }
 
 .fp-viewing-firstPage header .logo a { background: url(../image/common/logo-white.png) no-repeat center; background-size: cover; }
 
