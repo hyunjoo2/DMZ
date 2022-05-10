@@ -10,24 +10,34 @@ $(function () {
 
 
 
-    // var memberCountConTxt = $(this).data("count");
-  
-    //     $({ val : 0 }).animate({ val : memberCountConTxt }, {
-    //     duration: 2000,
-    //     step: function() {
-    //     var num = numberWithCommas(Math.floor(this.val));
-    //     $("..counter-num p").text(num);
-    //     },
-    //     complete: function() {
-    //     var num = numberWithCommas(Math.floor(this.val));
-    //     $("..counter-num p").text(num);
-    //     }
-    // });
-    
-    // function numberWithCommas(x) {
-    //     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    // }
+    $(window).resize(function () {
+        var width = $(window).width();
+        if (width <= 720) {
+            $('.section.active [data-aos]').removeClass("aos-animate");
+        } else {
+
+        }
+
+    });
+
+    $(window).trigger("resize"); //강제로 호출하는 함수
 
 
 
 })
+
+
+$(function () {
+    mobile();
+});
+
+function mobile() {
+
+    var w = $(".wrap").width();
+
+    if (w > 721) { //PC
+    
+    } else { //mobile 
+        $('.section.active [data-aos]').removeClass("aos-animate");
+    }
+}
