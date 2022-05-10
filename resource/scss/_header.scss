@@ -130,7 +130,7 @@ header {
                 >a{
                     @include d-flex;
                     height:10rem;
-                    padding:0 4.5rem;
+                    padding:0 6.5rem;
                     font-size: 2.2rem;
                     &+.depth2{
                         position: absolute;
@@ -453,6 +453,21 @@ header {
                                     margin-bottom: 3rem;
                                     font-size: 2.4rem;
                                     line-height: 100%;
+                                }
+                                &.active{
+                                    >a{
+                                        position: relative;
+                                        &::after{
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: -.5rem;
+                                            width: 100%;
+                                            height: 1.7rem;
+                                            background: rgba(63, 133, 1, .25);
+                                            content:""
+                                        }
+                                    }
+                                    
                                 }
                                 &+li{
                                     &::before{

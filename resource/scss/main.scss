@@ -44,6 +44,9 @@
                 color:#ffffff;
                 line-height: 100%;
                 text-shadow: 1px 1px 1.5rem rgba(0,0,0,0.35);
+                br{
+                    display: none;
+                }
                 span{
                     font : {
                         size: 6rem;
@@ -831,10 +834,14 @@
             .text{
                 h1{
                     line-height: normal;
+                    br{
+                        display: block;
+                    }
                 }
                 p{
                     line-height: normal;
                 }
+                
             }
         }
         &2{
@@ -843,6 +850,7 @@
                     .notice{
                         &__inner{
                             flex-direction: column;
+                            padding:3rem 4rem;
                         }
                         &-item{
                             &.first{
@@ -877,6 +885,13 @@
                 }
             }
         }
+        &4{
+            .newsletter{
+                &-des{
+                    line-height: 3rem;
+                }
+            }
+        }
     }
     .section:not(:first-child){
         >div{
@@ -887,8 +902,9 @@
         &__inner{
             div{
                 >a{
+                    @include d-flex;
                     padding: {
-                        top: 5.5rem;
+                        top: 0rem;
                         left: 1rem;
                         right:1rem;
                     }
@@ -898,6 +914,7 @@
                     
                 }
                 .txt{
+                    display: none;
                     visibility: visible;
                     br{
                         display:none;
@@ -921,6 +938,8 @@
                     .txt{
                         font-size: 1.8rem;
                         line-height: 3.2rem;
+                        height: 6.5rem;
+                        -webkit-line-clamp: 2;
                     }
                 }
             }

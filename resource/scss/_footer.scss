@@ -52,8 +52,16 @@
 @media screen and(max-width:720px){
     .footer{
         &__inner{
+            @include flex-column;
             padding-left:3rem;
             padding-right:3rem;
+        }
+        &-img{
+            margin-right: 0;
+        }
+        &-txt{
+            margin-top: 3rem;
+            text-align: center;
         }
     }
 }

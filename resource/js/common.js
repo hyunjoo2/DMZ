@@ -66,8 +66,15 @@ function sitemap(){
 		$(this).parents().find(".header").removeClass("h-100");
 		$("html, body").removeClass("overflow-hidden");
 		$('body').off('scroll touchmove mousewheel');
-	})
-	
+	});
+	$(".depth2>ul>li>a").mouseover(function(){
+		$(this).parent().parent().parent().parent().addClass("active");
+
+	});
+	$(".depth2>ul>li>a").mouseout(function(){
+		$(this).parent().parent().parent().parent().removeClass("active");
+
+	});
 }
 
 

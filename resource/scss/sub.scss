@@ -58,7 +58,7 @@
                         size:1.8rem;
                         weight:400;
                     }
-                    color:#888888;
+                    color:#555555;
                     i{
                         width:1.4rem;
                         height:.8rem;
@@ -338,7 +338,7 @@
                     weight: 500;
                 }
                 color:#3f8501;
-                border:3px solid #3f8501;
+                border:.3rem solid #3f8501;
             }  
         }
     }
@@ -411,7 +411,7 @@
                     .tit__inner{
                         @include display-flex;
                         @include align-center;
-                        width:100%;
+                        width:93%;
                         overflow: hidden;
                         //white-space: nowrap;
                         a{
@@ -635,6 +635,7 @@
             color:#222222;
             border:1px solid #cbcbcb;
             border-radius: .3rem;
+            flex:none;
         }
         >div{
             padding:2.5rem 3rem;
@@ -642,6 +643,9 @@
             a{
                 font-size:1.8rem;
                 color:#333333;
+                overflow:hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
             }
         }
     }
@@ -1206,6 +1210,9 @@
                             weight: 500;
                         }
                     }
+                    a{
+                        font-size: 1.8rem;
+                    }
                 }
                 i{
                     display: inline-block;
@@ -1430,6 +1437,9 @@
         ul{
             li{
                 width: calc(100% / 2);
+                a{
+                    margin:1.5rem 1rem;
+                }
             }
         }
     }
@@ -1517,6 +1527,14 @@
                     }
                 }
             }
+            &__inner{
+                padding:3rem 4rem;
+                li{
+                    &+li{
+                        padding-top:1rem;
+                    }
+                }
+            }
         }
     }
 
@@ -1529,9 +1547,13 @@
 
     /* breadcrumb */ 
     .breadcrumb__inner {
+        height: 9rem;
         .depth1, .depth2{
             flex:1;
             width:100%;
+            a{
+                font-size: 2.3rem;
+            }
         }
     }
 
@@ -1540,9 +1562,10 @@
         &-top{
             flex-direction: column;
             &::before{
-                top:0;
+                top:auto;
+                bottom: 0;
                 width:100%;
-                height:100%;
+                height:65%;
             }
             .text{
                 &__inner{
@@ -1578,20 +1601,40 @@
     }
 
     /* 기본프로그램 */ 
-    .ori{
-        &-img{
-            @include flex-column;
-            .img-wrap{
-                padding:1rem 3rem;
+    .ori {
+        &-img {
+            //@include flex-column;
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 2rem 1rem;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            background: transparent;
+
+            &::before {
+                position: absolute;
+                width: 300%;
+                top: 0;
+                left: -100%;
+                height: 100%;
+                background: #f7f7f7;
+                content: "";
+                z-index: -1;
+
+            }
+
+            .img-wrap {
+                padding: 1rem ;
+                width: 50%;
             }
         }
     }
-    
     /* 시설안내 */ 
     .fac{
         &-top{
             >.d-flex{
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
             &__right{
                 margin-top: 0;
@@ -1608,7 +1651,7 @@
             &__inner{
                 flex-direction: column;
                 margin : {
-                    top: 3rem;
+                    top: 5rem;
                     left: 0;
                     right:0;
                 }
@@ -1629,7 +1672,7 @@
                     .item#{$i}{
                         &__inner{
                             flex-direction: column;
-                            margin: 0 !important;
+                            margin: -2.5rem;
                             .img-wrap{
                                 width:100% !important;
                                 img{
@@ -1639,7 +1682,52 @@
                         }    
                     }
                 }
+                .no-img{
+                    display: none !important;
+                }
             }
+        }
+        &-des{
+            .mt_60{
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    /* 220510 디버깅 작업 */ 
+    .search{
+        &-box{
+            .form-select, .form-search{
+                height: 9rem;
+            }
+        }
+    }
+    .board{
+        &-view{
+            .view{
+                &-info{
+                    >*{
+                        &+*{
+                            &::before{
+                                top:.2rem;
+                            }
+                        }
+                    }
+                }
+                &-file{
+                    padding-bottom:2rem;
+                }
+            }
+        }
+    }
+    .root_daum_roughmap{
+        .wrap_map{
+            height:50rem !important;
+        }
+    }
+    .button-wrap{
+        button{
+            height: 5rem;
         }
     }
 }
