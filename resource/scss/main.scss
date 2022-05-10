@@ -760,9 +760,20 @@
 /*=================================================================================================
 ============================================ responsive ========================================
 ================================================================================================*/ 
+@media screen and(max-width:1200px){
+    #section{
+        @for $index from 2 through 3 {
+            &#{$index}{
+                padding:0 3rem;
+            }
+        }
+    }
+}
+
 
 @media screen and(max-width:900px){
     #section{
+        
         &2{
             height: auto !important;
             padding: {
@@ -810,9 +821,18 @@
 }
 @media screen and(max-width:720px){
     #section{
+        @for $index from 2 through 3 {
+            &#{$index}{
+                padding-left:0;
+                padding-right:0;
+            }
+        }
         &1{
             .text{
                 h1{
+                    line-height: normal;
+                }
+                p{
                     line-height: normal;
                 }
             }
