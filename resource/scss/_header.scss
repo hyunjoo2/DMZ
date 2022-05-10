@@ -578,6 +578,13 @@ body{
             ul{
                 width:100%;
             }
+            &-menu{
+                >li{
+                    >a{
+                        padding:0 2.5rem;
+                    }
+                }
+            }
         }
     }
 }
@@ -607,11 +614,14 @@ body{
             } 
         }
     }
+    #fp-nav{
+        display: none !important;
+    }
 }
 @media screen and(max-width:720px){
     header{
         &.main{
-            height: 10rem;    
+            height: 10rem !important;    
         }
         .sitemap{
             &.open{
