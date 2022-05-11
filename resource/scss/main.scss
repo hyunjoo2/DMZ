@@ -428,11 +428,14 @@
         align-items: center;
         margin-left: auto;
         a{
+            width: 2.1rem;
+            height: 2.1rem;
             margin-left: 2rem;
             font-size: 1.6rem;
             line-height: 100%;
             color:#555555;
             text-decoration: underline;
+            background: url(../image/main/icon-plus.png) no-repeat center;
             &:hover{
                 text-decoration: underline;
             }
@@ -759,6 +762,9 @@
     }
 }
 
+#fp-nav{
+    z-index: 0;
+}
 
 /*=================================================================================================
 ============================================ responsive ========================================
@@ -775,13 +781,12 @@
 
 
 @media screen and(max-width:900px){
-    #section{
-        
+    #section{    
         &2{
             height: auto !important;
             padding: {
-                top:5rem;
-                bottom:8rem;
+                top:7rem;
+                bottom:15rem;
             }
             .board-wrap{
                 flex-wrap: wrap;
@@ -866,9 +871,9 @@
                 }
             }
             .banner{
-                max-height: 50rem;
+                //max-height: 50rem;
                 &__inner{
-                    height: 100%;
+                    height: auto;
                     .swiper{
                         &-container{
                             height: 100%;
@@ -877,7 +882,8 @@
                             a{
                                 height: 100%;
                                 img{
-                                    height: 100%;
+                                    width:100%;
+                                    //height: 100%;
                                 }
                             }
                         }

@@ -132,9 +132,9 @@
 							</div>
 							<div class="sitemap-menu">
 								<div class="sitemap-header">
-									<!-- <div class="logo">
+									<div class="logo">
 										<a href="./index.html"></a>
-									</div> -->
+									</div>
 									<div class="sitemap-button">
 										<button type="button" class="d-flex flex-column justify-content-between button-close">
 											<span class="m1"></span>
@@ -285,7 +285,7 @@
 									<a class="nav-link last" href="#tab3" data-toggle="tab">영상자료</a>
 								</li>
 								<li class="nav-plus">
-									<a href="javascript:void(0)">더보기</a>
+									<a href="javascript:void(0)"></a>
 								</li>
 							</ul>
 							<div class="tab-content main_news">
@@ -566,6 +566,15 @@
 
 	//애니메이션 script
 	AOS.init();
+
+	AOS.init({
+
+	disable: function () {
+		var desktop = 721;
+		return window.innerWidth < desktop;
+		} // 720px 이상일 때 disable
+
+	});
 
 
 	//풀페이지 script
