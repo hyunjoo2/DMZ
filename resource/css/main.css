@@ -713,7 +713,7 @@ body.overflow-hidden #fp-nav { display: none; }
   #section3 { padding: 0 3rem; } }
 
 @media screen and (max-width: 900px) { #section2 { height: auto !important; padding-top: 7rem; padding-bottom: 15rem; }
-  #section2 .board-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 4rem; }
+  #section2 .board-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; margin-top: 6rem; }
   #section2 .banner { width: 100%; margin-left: 0; margin-top: 2rem; }
   #section2 .banner__inner { width: 100%; }
   #section2 .banner__inner .swiper-slide a { display: block; width: 100%; }
