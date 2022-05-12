@@ -975,7 +975,7 @@ body.overflow-hidden #fp-nav { display: none; }
   .fac-bottom__inner .no-img { display: none !important; }
   .fac-des .mt_60 { margin-top: 3rem; }
   /* 220510 디버깅 작업 */
-  .search-box .form-select, .search-box .form-search { height: 9rem; }
+  .search-box .form-select, .search-box .form-search { height: 5rem; }
   .board-view .view-info > * + *::before { top: .2rem; }
   .board-view .view-file { padding-bottom: 2rem; }
   .root_daum_roughmap .wrap_map { height: 50rem !important; }
