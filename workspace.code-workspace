@@ -6,13 +6,10 @@
 		{
 			"name": "gysc",
 			"path": "..\\..\\..\\ㄱ\\경기청소년활동진흥센터\\2022 개편\\작업\\gysc"
-		},
-		{
-			"path": "."
 		}
 	],
 	"settings": {
 		"liveServer.settings.port": 5501,
-		"liveServer.settings.multiRootWorkspaceName": "작업"
+		"liveServer.settings.multiRootWorkspaceName": "gysc"
 	}
 }

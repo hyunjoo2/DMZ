@@ -1,30 +1,6 @@
 
 /* header */
 header {
-    // .sns{
-    //     height:4.2rem; 
-    //     ul{
-    //         width:140rem; 
-    //         height: 100%; 
-    //         margin: 0 auto;
-    //         li{
-    //             @include display-flex;
-    //             @include align-center;
-    //             height:100%; 
-    //             padding:0 2rem; 
-    //             &:not(:last-child){
-    //                 border-right:1px solid #d0d0d0;
-    //             }
-    //             &:last-child{
-    //                 padding-right:0;
-    //             }
-    //             a{
-    //                 font-size: 1.4rem; 
-    //                 color: #555555; 
-    //             }
-    //         }
-    //     }
-    // }
     position: absolute;
     top: 0;
     left: 0;
@@ -130,7 +106,7 @@ header {
                 >a{
                     @include d-flex;
                     height:10rem;
-                    padding:0 6.5rem;
+                    padding:0 5rem;
                     font-size: 2.2rem;
                     &+.depth2{
                         position: absolute;
@@ -250,9 +226,12 @@ header {
             }
         }
         ul{
+            position: absolute;
+            left: 50%;
             width:auto;
-            justify-content: space-between;
+            justify-content: center;
             margin: 0 auto;
+            transform: translateX(-50%);
             li{
                 //margin-right: 10rem;
                 font-size: 2.4rem;
@@ -517,6 +496,43 @@ header {
             }
         }
     }
+    .button{
+        &-user{
+            @include display-flex;
+            @include align-center;
+            margin-left: auto;
+            padding: 0 1.5rem 0 2rem;
+            .button{
+                &-wrap{
+                    @include display-flex;
+                    @include align-center;
+                }
+                &-eduDown{
+                    width: auto;
+                    padding: 0 3.5rem 0 1rem;
+                    font-size: 1.4rem;
+                    color:#ffffff;
+                    text-align: left;
+                    border:1px solid #000000;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M0 14V8h1v5h13V8h1v6H0Zm8.353-5.354-.707.708-.146-.147-.147.147-.707-.708.147-.146-3.147-3.146.708-.708L7 7.293V0h1v7.293l2.646-2.647.708.708L8.207 8.5l.146.146Z'/%3E%3C/svg%3E");
+                    background-color: #3f8501;
+                    background-repeat: no-repeat;
+                    background-position: right 1rem center;
+                    background-size: 1.5rem 1.4rem;
+                    border-color: #3f8501;
+                    transition: all .2s;
+                    
+                }
+                &-kakao{
+                    width: 9.2rem;
+                    height: 3.5rem;
+                    margin-left: 2rem;
+                    background: url(../image/common/button-kakao.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
 }
 
 .fp-viewing{
@@ -531,6 +547,36 @@ header {
                 &.open{
                     .gnb_wrap{
                         border-bottom: 1px solid #ededed;
+                    }
+                    .button{
+                        &-user{
+                            .button{
+                                &-eduDown{     
+                                    color:#000000;
+                                    border-color:#000000;
+                                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14'%3E%3Cpath fill-rule='evenodd' fill='rgb(0, 0, 0)' d='M0 14V8h1v5h13V8h1v6H0Zm8.353-5.354-.707.708-.146-.147-.147.147-.707-.708.147-.146-3.147-3.146.708-.708L7 7.293V0h1v7.293l2.646-2.647.708.708L8.207 8.5l.146.146Z'/%3E%3C/svg%3E");
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .button{
+                &-user{
+                    .button{
+                        &-eduDown{     
+                            color:#ffffff;
+                            border-color:#ffffff;
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M0 14V8h1v5h13V8h1v6H0Zm8.353-5.354-.707.708-.146-.147-.147.147-.707-.708.147-.146-3.147-3.146.708-.708L7 7.293V0h1v7.293l2.646-2.647.708.708L8.207 8.5l.146.146Z'/%3E%3C/svg%3E");
+                            background-color: transparent;
+                            &:hover{
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='14'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M0 14V8h1v5h13V8h1v6H0Zm8.353-5.354-.707.708-.146-.147-.147.147-.707-.708.147-.146-3.147-3.146.708-.708L7 7.293V0h1v7.293l2.646-2.647.708.708L8.207 8.5l.146.146Z'/%3E%3C/svg%3E") !important;
+                                background-color: #3f8501;
+                                border-color: #3f8501 !important;
+                                color:#ffffff;
+                            }
+                        }
                     }
                 }
             }
@@ -601,24 +647,25 @@ body{
 /*=================================================================================================
 ============================================ responsive ========================================
 ================================================================================================*/ 
-@media screen and(max-width:1400px){
+@media screen and(max-width:1500px){
     header{
         .gnb{
             >ul{
                 >li{
                     >a{
-                        padding:0 4.5rem;
+                        padding:0 4rem;
                     }
                 }
             }
         } 
     } 
 }
-@media screen and(max-width:1200px){
+@media screen and(max-width:1400px){
     header{
         .gnb{
             //padding:0 4.5rem;
             >ul{
+                position: relative;
                 width:90%;
                 >li{
                     flex:1;
@@ -630,6 +677,9 @@ body{
             
         }
     }
+}
+@media screen and(max-width:1200px){
+    
 }
 @media screen and(max-width:1024px){
     header{
