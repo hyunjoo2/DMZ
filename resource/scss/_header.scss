@@ -198,6 +198,19 @@ header {
                 
             }
         }
+        .button{
+            &-user{
+                .button{
+                    &-eduDown{
+                        &:hover{
+                            color:#ffffff !important;
+                        }
+                        
+                    }
+                  
+                }
+            }
+        }
     }
     .logo{
         @include d-flex;
@@ -521,6 +534,9 @@ header {
                     background-size: 1.5rem 1.4rem;
                     border-color: #3f8501;
                     transition: all .2s;
+                    &:hover{
+                        color:#ffffff !important;
+                    }
                     
                 }
                 &-kakao{
